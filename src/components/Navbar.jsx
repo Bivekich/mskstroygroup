@@ -6,13 +6,13 @@ import logo from "../assets/images/Group2.svg"; // Ensure the path to your logo 
 const Navbar = () => {
   return (
     <nav>
-      <div className="flex justify-around items-center mt-5">
+      <div className="flex justify-around items-center my-5">
         <Link to="/">
           {" "}
           <img src={logo} alt="Logo" className="w-[277px] h-full" />
         </Link>
 
-        <div className="flex gap-5 text-white transition-all text-xl">
+        <div className="flex gap-10 text-white transition-all text-xl">
           {/* Links with underline animation */}
           <Link
             to=""
@@ -53,8 +53,8 @@ const Navbar = () => {
         </div>
 
         <div>
-          <Link to="/user">
-            <button className="px-10 py-3 bg-[#8BFF30] hover:bg-[#32cf3a] hover:scale-[1.01] ease-in-out duration-300 transition-all ">
+          <Link to="/">
+            <button className="px-10 py-3 text-[22px] bg-[#8BFF30] hover:bg-[#55b74a] hover:scale-[1.01] ease-in-out duration-300 transition-all ">
               ЗАКАЗАТЬ ЗВОНОК
             </button>
           </Link>
