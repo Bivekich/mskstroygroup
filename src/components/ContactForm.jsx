@@ -11,16 +11,14 @@ const ContactForm = () => {
   return (
     <div className=" bg-white">
       <div className="flex items-center w-[87%] justify-between m-auto">
-        {/* Container */}
         <div className=" flex justify-between w-full">
-          {/* Left Section - Contact Info */}
           <div className="bg-[#757575] p-10 text-white">
             <h2 className="text-[#8BFF30] text-3xl font-bold mb-5">КОНТАКТЫ</h2>
             <p>8 (960) 860–53–48</p>
             <p>8 (495) 974–14–19</p>
             <p className="mt-3">info@mskstroygroupp.ru</p>
             <p className="mt-5">с 9:00 до 20:00 без выходных</p>
-            {/* Social Icons */}
+
             <div className="flex mt-10 space-x-5 text-[#8BFF30]">
               <a href="#">
                 <FontAwesomeIcon icon={faVk} size="2x" />
@@ -37,14 +35,12 @@ const ContactForm = () => {
             </div>
           </div>
 
-          {/* Right Section - Form */}
           <div className="bg-[#757575] p-10 text-white">
             <h2 className="text-2xl font-bold mb-5">ОСТАЛИСЬ ВОПРОСЫ?</h2>
             <p className="mb-8">
               Оставьте заявку, а наш эксперт ответит на все ваши вопросы
             </p>
 
-            {/* Form */}
             <form className="space-y-5">
               <input
                 type="text"

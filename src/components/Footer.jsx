@@ -1,18 +1,18 @@
-import logo from "../assets/images/Group.svg"; // Ensure the path to your logo is correct
+import logo from "../assets/images/Group.svg"; 
 
 const Footer = () => {
   return (
     <div className=" text-white py-10">
       <footer className="w-[87%] m-auto">
         <div className="flex justify-between items-start">
-          {/* Left Side - Logo and Working Hours */}
+
           <div>
             <img src={logo} alt="Logo" className="w-[277px] h-auto mb-4" />
             <p className="text-[#757575] text-[30px] mb-6">
               с 9:00 до 20:00 без выходных
             </p>
 
-            {/* Social Media Icons */}
+    
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -53,7 +53,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Center Links */}
           <div className="text-[24px] space-y-3 flex-col ml-[-120px]">
             <div className="flex gap-[50%]">
               <p>ГЛАВНАЯ</p>
@@ -70,7 +69,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Side - Contact Information */}
           <div className="text-[24px] space-y-2 flex flex-col">
             <a href="tel:+79608605348">8 (960) 860-53-48</a>
             <a href="tel:+74959741419">8 (495) 974-14-19</a>
@@ -78,7 +76,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer Bottom */}
         <hr className="border-gray-600 my-6" />
         <div className="flex justify-between text-gray-400 text-[14px]">
           <p>© 2024 Msk Stroy Group</p>

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/Group2.svg"; // Ensure the path to your logo is correct
+import logo from "../assets/images/Group2.svg";
 
 const Navbar = () => {
   return (
@@ -13,7 +13,7 @@ const Navbar = () => {
         </Link>
 
         <div className="flex gap-10 text-white transition-all text-xl">
-          {/* Links with underline animation */}
+ 
           <Link
             to=""
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"
