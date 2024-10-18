@@ -5,7 +5,14 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
       ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '20px 0 25px -10px rgba(0, 0, 0, 0.3)',
+      },
+      fontFamily: {
+        'roadRadio': ['roadRadio', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

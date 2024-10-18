@@ -6,7 +6,7 @@ import logo from "../assets/images/Group2.svg";
 const Navbar = () => {
   return (
     <nav>
-      <div className="flex justify-around items-center my-5">
+      <div className="flex justify-around items-center my-5 font-roadRadio">
         <Link to="/">
           {" "}
           <img src={logo} alt="Logo" className="w-[277px] h-full" />
