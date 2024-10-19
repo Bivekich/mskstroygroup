@@ -8,23 +8,15 @@ const PartnerLogos = () => {
   ];
 
   return (
-    <div className="bg-[#393939] text-center min-h-screen flex flex-col justify-center items-center">
-      <h1 className="text-[#8BFF30] text-4xl font-bold mb-20">НАШИ ПАРТНЕРЫ</h1>
-      <div className="grid grid-cols-3 gap-6">
+    <div className="bg-[#393939] text-center flex flex-col justify-center items-center w-[97%] m-auto mb-10">
+      <h2 className="text-center text-[#8BFF30] text-7xl font-roadRadio mb-[50px] relative z-10">
+        НАШИ ПАРТНЕРЫ
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-20 w-full">
         {partners.map((partner, index) => (
           <div
             key={index}
-            className="bg-[#707070] w-52 h-52 flex justify-center items-center hover:bg-[#9c9c9c] hover:scale-[1.01] hover:shadow-2xl transition-all"
-            className="bg-[#707070] w-64 h-64 flex justify-center items-center hover:bg-[#9c9c9c] hover:scale-[1.01] hover:shadow-2xl transition-all"
-          >
-            <span className="text-6xl">{partner.logo}</span>
-          </div>
-        ))}
-        {partners.map((partner, index) => (
-          <div
-            key={index + partners.length}
-            className="bg-[#707070] w-52 h-52 flex justify-center items-center hover:bg-[#9c9c9c] hover:scale-[1.01] hover:shadow-2xl transition-all"
-            className="bg-[#707070] w-64 h-64 flex justify-center items-center hover:bg-[#9c9c9c] hover:scale-[1.01] hover:shadow-2xl transition-all"
+            className="bg-[#707070] flex h-[56vh] justify-center items-center hover:bg-[#9c9c9c] hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <span className="text-6xl">{partner.logo}</span>
           </div>
