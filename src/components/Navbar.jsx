@@ -17,7 +17,7 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="w-[277px] h-full" />
         </Link>
 
-        <div className="flex gap-10 text-white transition-all text-xl">
+        <div className="flex gap-10 text-white transition-all text-2xl">
           <Link
             to=""
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"

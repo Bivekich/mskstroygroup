@@ -1,43 +1,37 @@
 
+const partners = [
+  { name: "Эмиль Ананьев", logo: "picture", description: "uries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lore"  },
+  { name: "Эмиль Ананьев", logo: "picture", description: "uries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lore"},
+  { name: "Даниил Яковлев", logo: "picture", description: "uries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lore" },
+];
+
 const TeamSection = () => {
   return (
-    <div className="bg-[#393939] text-white py-10 relative">
+    <div className="bg-[#393939] text-center flex flex-col justify-center items-center w-[97%] m-auto mb-20">
       {/* Title */}
-      <h2 className="text-center text-lime-400 text-xl font-bold mb-5">НАША КОМАНДА</h2>
-      {/* Background text */}
-      <div className="text-center text-gray-500 text-6xl font-bold absolute inset-x-0 top-20">ЭКСПЕРТЫ</div>
-
-      {/* Team members */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
-        {/* First team member */}
-        <div className="flex flex-col items-center space-y-4">
-          <div className="bg-gray-600 h-60 w-60"></div>
-          <h3 className="text-lg font-semibold">ЭМИЛЬ АНАНЬЕВ</h3>
-          <p className="text-sm text-gray-300 text-center px-4">
-            Lorem ipsum dolor amet, consectetur adipiscing elit. Fringilla montes pharetra risus massa accumsan.
-            Pharetra est quam libero nunc eget penatibus rhoncus in. Sagittis dapibus ultrices natoque condimentum.
-          </p>
+      <div className="relative">
+        <h2 className="text-center text-[#8BFF30] text-7xl font-roadRadio mb-[90px] relative z-10">
+        НАША КОМАНДА
+      </h2>
+      <div className="absolute inset-0 flex items-center justify-center ">
+    <h1 className="text-[160px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
+      ЭКСПЕРТЫ
+    </h1>
+  </div></div>
+      
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-20 w-full text-white">
+        {partners.map((partner, index) => (
+          <div><div
+          key={index}
+          className="bg-[#707070] flex h-[56vh] justify-center items-center hover:shadow-xl transition-all mb-7"
+        >
+          <span className="text-6xl">{partner.logo}</span>
         </div>
-
-        {/* Second team member */}
-        <div className="flex flex-col items-center space-y-4">
-          <div className="bg-gray-600 h-60 w-60"></div>
-          <h3 className="text-lg font-semibold">ДАНИЛ ЯКОВЛЕВ</h3>
-          <p className="text-sm text-gray-300 text-center px-4">
-            Lorem ipsum dolor amet, consectetur adipiscing elit. Fringilla montes pharetra risus massa accumsan.
-            Pharetra est quam libero nunc eget penatibus rhoncus in. Sagittis dapibus ultrices natoque condimentum.
-          </p>
-        </div>
-
-        {/* Third team member (same as second one) */}
-        <div className="flex flex-col items-center space-y-4">
-          <div className="bg-gray-600 h-60 w-60"></div>
-          <h3 className="text-lg font-semibold">ДАНИЛ ЯКОВЛЕВ</h3>
-          <p className="text-sm text-gray-300 text-center px-4">
-            Lorem ipsum dolor amet, consectetur adipiscing elit. Fringilla montes pharetra risus massa accumsan.
-            Pharetra est quam libero nunc eget penatibus rhoncus in. Sagittis dapibus ultrices natoque condimentum.
-          </p>
-        </div>
+        <div className="mb-3"><h className="text-3xl font-roadRadio">{partner.name}</h></div>
+        <p className="w-[70%] font-light text-2xl m-auto text-left">{partner.description}</p></div>
+          
+          
+        ))}
       </div>
     </div>
   );

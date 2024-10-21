@@ -11,6 +11,7 @@ export default {
       },
       fontFamily: {
         'roadRadio': ['roadRadio', 'sans-serif'],
+        'gilroy': ['gilroy', 'sans-serif'],
       },
     },
   },

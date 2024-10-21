@@ -7,6 +7,11 @@
   src: url('./assets/RoadRadio.ttf');
 }
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/Gilroy-Regular.ttf');
+}
+
 *,
 *::before,
 *::after {

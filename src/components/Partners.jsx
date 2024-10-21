@@ -8,7 +8,7 @@ const PartnerLogos = () => {
   ];
 
   return (
-    <div className="bg-[#393939] text-center flex flex-col justify-center items-center w-[97%] m-auto mb-10">
+    <div className="bg-[#393939] text-center flex flex-col justify-center items-center w-[97%] m-auto mb-20">
       <h2 className="text-center text-[#8BFF30] text-7xl font-roadRadio mb-[50px] relative z-10">
         НАШИ ПАРТНЕРЫ
       </h2>
