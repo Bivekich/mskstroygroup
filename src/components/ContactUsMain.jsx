@@ -21,24 +21,24 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-[#393939] flex flex-col justify-center items-center">
+    <div className="bg-[#393939] flex flex-col justify-center items-center mb-20">
       <div className="w-full p-8">
-        <h1 className="text-[#8BFF30] text-7xl white font-bold text-center mb-6">
+        <h1 className="text-center text-[#8BFF30] text-7xl font-roadRadio mb-6">
           СВЯЗАТЬСЯ С НАМИ
         </h1>
-        <div className="max-w-[30%] flex flex-col ">
-          <p className="text-white text-lg mb-6">
+        <div className="max-w-[35%] flex flex-col m-auto">
+          <p className="text-white text-2xl mb-6 font-gilroy tracking-wide">
             Если у вас остались вопросы или предложения — заполните форму, и мы
             с вами свяжемся
           </p>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 font-gilroy">
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
               placeholder="Имя"
-              className="w-full p-3 bg-transparent border border-[#757575] text-gray-300 placeholder-white"
+              className="w-full p-3 bg-transparent border border-[#757575]  text-gray-300 placeholder-white placeholder:text-xl focus:outline-none focus:ring-2 focus:ring-lime-500"
               required
             />
             <input
@@ -47,7 +47,7 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Телефон"
-              className="w-full p-3 bg-transparent border border-[#757575] text-gray-300 placeholder-white"
+              className="w-full p-3 bg-transparent border border-[#757575] text-gray-300 placeholder-white placeholder:text-xl focus:outline-none focus:ring-2 focus:ring-lime-500"
               required
             />
             <input
@@ -56,7 +56,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email"
-              className="w-full p-3 bg-transparent border border-[#757575] text-gray-300 placeholder-white"
+              className="w-full p-3 bg-transparent border border-[#757575] text-gray-300 placeholder-white placeholder:text-xl focus:outline-none focus:ring-2 focus:ring-lime-500"
               required
             />
             <textarea
@@ -64,13 +64,13 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Ваш вопрос"
-              className="w-full p-3 bg-transparent border border-[#757575] text-gray-300 placeholder-white h-32"
+              className="w-full p-3 bg-transparent border border-[#757575] text-gray-300 placeholder-white h-32 placeholder:text-xl focus:outline-none focus:ring-2 focus:ring-lime-500"
               required
             ></textarea>
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-[#8BFF30] hover:bg-[#55b74a] text-black px-8 py-3 font-semibold"
+                className="bg-[#8BFF30] hover:bg-[#55b74a] m text-black px-10 py-3 text-xl font-semibold transition font-roadRadio"
               >
                 Отправить заявку
               </button>

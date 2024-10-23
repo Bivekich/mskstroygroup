@@ -16,7 +16,7 @@ const PartnerLogos = () => {
         {partners.map((partner, index) => (
           <div
             key={index}
-            className="bg-[#707070] flex h-[56vh] justify-center items-center hover:bg-[#9c9c9c] hover:scale-[1.01] hover:shadow-2xl transition-all"
+            className="bg-[#707070] flex h-[56vh] justify-center items-center duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <span className="text-6xl">{partner.logo}</span>
           </div>

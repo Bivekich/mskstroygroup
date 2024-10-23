@@ -49,7 +49,7 @@ const Navbar = () => {
             ОТЗЫВЫ
           </Link>
           <Link
-            to=""
+            to="/Contacts"
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"
           >
             КОНТАКТЫ
@@ -60,7 +60,7 @@ const Navbar = () => {
           {/* Button that toggles the popup */}
           <button
             onClick={togglePopup}
-            className="px-10 py-3 text-[22px] bg-[#8BFF30] hover:bg-[#55b74a] hover:scale-[1.01] ease-in-out duration-300 transition-all"
+            className="px-10 py-3 text-[22px] bg-[#8BFF30] hover:bg-[#55b74a] hover:scale-[1.01] ease-in-out transition-all"
           >
             ЗАКАЗАТЬ ЗВОНОК
           </button>

@@ -2,8 +2,14 @@ import React from "react";
 
 const ContactPopup = ({ togglePopup }) => {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
-      <div className="bg-[#505050] py-[75px] shadow-lg text-white relative w-[27%] text-center flex flex-col justify-center">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20"
+      onClick={togglePopup} // Add this line
+    >
+      <div
+        className="bg-[#505050] py-[75px] shadow-lg text-white relative w-[27%] text-center flex flex-col justify-center"
+        onClick={(e) => e.stopPropagation()} // Add this line to prevent closing when clicking inside the popup
+      >
         <h2 className=" mb-4 text-4xl font-roadRadio">ЗАКАЗАТЬ ЗВОНОК</h2>
         <p className="mb-6 font-light text-2xl w-[70%] m-auto">
           Оставьте заявку, и наш эксперт ответит на все ваши вопросы
@@ -12,7 +18,6 @@ const ContactPopup = ({ togglePopup }) => {
         {/* Form */}
         <form className="w-[70%] m-auto">
           <div className="mb-4">
-            
             <input
               type="text"
               className="w-full px-3 py-2 text-gray-900 border-[2px] border-[#272727] bg-[#505050] placeholder:text-xl placeholder:text-white placeholder:font-light focus:outline-none focus:ring-2 focus:ring-lime-500"
@@ -20,7 +25,6 @@ const ContactPopup = ({ togglePopup }) => {
             />
           </div>
           <div className="mb-4">
-            
             <input
               type="tel"
               className="w-full px-3 py-2 text-gray-900 border-[2px] border-[#272727] bg-[#505050] placeholder:text-xl placeholder:text-white placeholder:font-light focus:outline-none focus:ring-2 focus:ring-lime-500"
@@ -28,7 +32,6 @@ const ContactPopup = ({ togglePopup }) => {
             />
           </div>
           <div className="mb-4">
-            
             <input
               type="email"
               className="w-full px-3 py-2 text-gray-900 border-[2px] border-[#272727] bg-[#505050] placeholder:text-xl placeholder:text-white placeholder:font-light focus:outline-none focus:ring-2 focus:ring-lime-500"

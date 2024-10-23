@@ -29,8 +29,18 @@ function App() {
               <WhyTrustUs />
               <Partners />
               <TeamSection />
-              <Reviews/>
+              <Reviews />
               <ContactUsMain />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/Contacts"
+          element={
+            <>
+              {" "}
+              <Navbar />
               <ContactForm />
               <Footer />
             </>
