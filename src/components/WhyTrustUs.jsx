@@ -6,8 +6,26 @@ import {
   faLayerGroup,
   faFileContract,
 } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import { client } from "../sanityClient";
 
 const WhyTrustUs = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await client.fetch('*[_type == "whyTrustUs"][0]');
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (!data) return null;
+
   return (
     <div className="bg-[#393939] text-white p-8 mb-8 relative">
       <h2 className="text-center text-[#8BFF30] text-7xl font-roadRadio mb-[90px] relative z-10">
@@ -30,15 +48,10 @@ const WhyTrustUs = () => {
             </div>
 
             <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide ">
-              ГАРАНТИЯ НА ВСЕ ВИДЫ РАБОТ - 2 ГОДА
+              {data.title1}
             </h3>
             <p className=" text-2xl tracking-wide font-gilroy">
-              Наша компания дает гарантию на все виды работ на 2 года, что
-              свидетельствует о высоком качестве предоставляемых услуг и доверии
-              к своим специалистам. Эта гарантия позволяет нашим клиентам быть
-              уверенными, что мы готовы поддерживать качество нашего труда и
-              исправлять любые недочёты, если они возникнут в течение
-              гарантийного срока.
+              {data.description1}
             </p>
           </div>
         </div>
@@ -53,13 +66,10 @@ const WhyTrustUs = () => {
               />
             </div>
             <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide text-[#393939]">
-              БЕСПЛАТНОЕ СОСТАВЛЕНИЕ СМЕТЫ
+              {data.title2}
             </h3>
             <p className="text-2xl font-gilroy tracking-wide text-[#393939]">
-              Наша компания бесплатно составляет смету, что позволяет клиентам
-              заранее оценить затраты на проект и принять обоснованное решение.
-              Мы понимаем, что планирование бюджета является важным этапом в
-              любых работах, будь то строительство, ремонт или другие услуги.
+              {data.description2}
             </p>
           </div>
         </div>
@@ -73,13 +83,10 @@ const WhyTrustUs = () => {
               />
             </div>
             <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide">
-              СОЗДАНИЕ ДИЗАЙН ПРОЕКТА
+              {data.title3}
             </h3>
             <pc className=" text-2xl font-gilroy tracking-wide">
-              Наша компания создает дизайн- проект, который учитывает индиви-
-              дуальные потреб- ности и пожелания клиента. Мы настраиваем каждый
-              элемент, чтобы гармонично вписать его в общую концепцию, создавая
-              эстетически прият- ные и функциональ- ные пространства.
+              {data.description3}
             </pc>
           </div>
         </div>
@@ -93,13 +100,10 @@ const WhyTrustUs = () => {
               />
             </div>
             <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide text-[#393939]">
-              ИСПОЛЬЗОВАНИЕ КАЧЕСТВЕННЫХ МАТЕРИАЛОВ
+              {data.title4}
             </h3>
             <p className=" text-2xl font-gilroy tracking-wide text-[#393939]">
-              Наша компания использует качественные материалы, что гарантирует
-              надежность и долговечность всех работ. Мы тщательно отбираем
-              партнеров, осознавая, что материалы влияют как на внешний вид, так
-              и на устойчи- вость конструкций.
+              {data.description4}
             </p>
           </div>
         </div>
@@ -113,13 +117,10 @@ const WhyTrustUs = () => {
               />
             </div>
             <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide flex justify-center">
-              РАБОТАЕМ ПО ДОГОВОРУ
+              {data.title5}
             </h3>
             <p className=" text-2xl font-gilroy tracking-wide">
-              Наша компания работает по договору, что обеспечивает прозрачность
-              сотрудничества и четкое опре- деление ролей и обязанностей сторон.
-              Мы ценим доверие клиентов, гарантируя фиксацию всех
-              условий,включая сроки, оплату и изменения в проекте.
+              {data.description5}
             </p>
           </div>
         </div>

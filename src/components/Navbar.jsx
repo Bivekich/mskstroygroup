@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/Group2.svg";
 import ContactPopup from "./ContactPopup"; // Import the popup component
 
-const Navbar = () => {
+const Navbar = ({ onScroll, sections }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const togglePopup = () => {
@@ -19,31 +19,33 @@ const Navbar = () => {
 
         <div className="flex gap-10 text-white transition-all text-2xl">
           <Link
-            to=""
+            to="/News"
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"
           >
             НОВОСТИ
           </Link>
           <Link
-            to=""
+            to="/Prices"
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"
           >
             ЦЕНЫ
           </Link>
           <Link
-            to=""
+            to="/"
+            onClick={() => onScroll(sections.ourProjectsRef)}
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"
           >
             ПРОЕКТЫ
           </Link>
           <Link
-            to=""
+            to="/Prices"
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"
           >
             УСЛУГИ
           </Link>
           <Link
-            to=""
+            to="/"
+            onClick={() => onScroll(sections.reviewsRef)}
             className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out"
           >
             ОТЗЫВЫ

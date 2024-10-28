@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'roadRadio';
-  src: url('./assets/RoadRadio.ttf');
+  font-family: "roadRadio";
+  src: url("./assets/RoadRadio.ttf");
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./assets/Gilroy-Regular.ttf');
+  font-family: "Gilroy";
+  src: url("./assets/Gilroy-Regular.ttf");
 }
 
 *,
@@ -44,4 +44,43 @@ body {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+* Slide-in from the right */ .slide-next-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slide-next-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.slide-next-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-next-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+/* Slide-in from the left */
+.slide-prev-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.slide-prev-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.slide-prev-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-prev-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 500ms, transform 500ms;
 }

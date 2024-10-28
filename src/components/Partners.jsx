@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import sanityClient from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
+
+// Configure Sanity client
+const client = sanityClient({
+  projectId: "d3jxz1tr", // Replace with your project ID
+  dataset: "production",
+  useCdn: true,
+});
+
+// Image URL builder function
+const builder = imageUrlBuilder(client);
+function urlFor(source) {
+  return builder.image(source);
+}
 
 const PartnerLogos = () => {
-  const partners = [
-    { name: "Apple", logo: "logo" },
-    { name: "Samsung", logo: "logo" },
-    { name: "Huawei", logo: "logo" },
-  ];
+  const [partners, setPartners] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "partnerLogo"]{name, logo, link}`)
+      .then((data) => setPartners(data))
+      .catch(console.error);
+  }, []);
 
   return (
     <div className="bg-[#393939] text-center flex flex-col justify-center items-center w-[97%] m-auto mb-20">
@@ -16,9 +34,29 @@ const PartnerLogos = () => {
         {partners.map((partner, index) => (
           <div
             key={index}
-            className="bg-[#707070] flex h-[56vh] justify-center items-center duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
+            className=" flex  justify-center items-center duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
-            <span className="text-6xl">{partner.logo}</span>
+            {partner.logo ? (
+              <a
+                href={partner.link}
+                target="_blank"
+                className="relative w-full h-0 pb-[100%] bg-black overflow-hidden"
+              >
+                {/* Grey Tint Overlay */}
+                <div className="absolute inset-0 bg-[#393939] opacity-30 hover:opacity-10 duration-500 transition-all z-[2]" />
+
+                {/* Image */}
+                <img
+                  src={urlFor(partner.logo).url()}
+                  alt={partner.name}
+                  className="p-10 absolute inset-0 w-full h-full object-cover hover:rounded-2xl transition-all duration-700 z-[1]"
+                />
+              </a>
+            ) : (
+              <span className="text-6xl text-white font-roadRadio text-center">
+                {partner.name}
+              </span>
+            )}
           </div>
         ))}
       </div>
