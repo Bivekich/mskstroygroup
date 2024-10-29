@@ -2,7 +2,7 @@
 export default {
   name: 'service',
   type: 'document',
-  title: 'Service',
+  title: 'Услуги',
   fields: [
     {
       name: 'icon',

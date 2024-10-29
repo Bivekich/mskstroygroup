@@ -1,6 +1,6 @@
 export default {
   name: 'commercialRealEstate',
-  title: 'Commercial Real Estate Section',
+  title: 'Главная страница',
   type: 'document',
   fields: [
     {

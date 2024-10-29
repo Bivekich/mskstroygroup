@@ -2,7 +2,7 @@
 export default {
   name: 'reviews',
   type: 'document',
-  title: 'Reviews',
+  title: 'Отзывы',
   fields: [
     {
       name: 'name1',

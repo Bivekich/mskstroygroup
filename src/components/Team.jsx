@@ -41,7 +41,7 @@ const TeamSection = () => {
       variants={fadeInVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
       className="bg-[#393939] text-center flex flex-col justify-center items-center w-[95%] sm:w-[97%] m-auto mb-10 sm:mb-20 p-4 sm:p-8"
     >
       {/* Title */}
@@ -63,7 +63,7 @@ const TeamSection = () => {
             variants={fadeInVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="flex flex-col items-center"
           >
             <div className="relative w-full h-0 pb-[100%] bg-[#707070] overflow-hidden mb-4 sm:mb-7">

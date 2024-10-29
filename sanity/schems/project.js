@@ -1,7 +1,7 @@
 // schemas/project.js
 export default {
   name: 'project',
-  title: 'Project',
+  title: 'Наши проекты',
   type: 'document',
   fields: [
     {

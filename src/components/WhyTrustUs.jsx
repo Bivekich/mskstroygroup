@@ -65,12 +65,13 @@ const WhyTrustUs = () => {
         variants={containerVariants}
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 m:gap-6"
       >
         {/* Column 1 */}
         <motion.div
           variants={fadeInVariants}
+          viewport={{ once: true, margin: "-100px" }}
           className="bg-[#757575] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[5]"
         >
           <div className="w-[95%] sm:w-[90%] m-auto">
@@ -92,6 +93,7 @@ const WhyTrustUs = () => {
         {/* Column 2 */}
         <motion.div
           variants={fadeInVariants}
+          viewport={{ once: true, margin: "-100px" }}
           className="bg-[#8BFF30] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[4]"
         >
           <div className="w-[95%] sm:w-[85%] m-auto">
@@ -113,6 +115,7 @@ const WhyTrustUs = () => {
         {/* Column 3 */}
         <motion.div
           variants={fadeInVariants}
+          viewport={{ once: true, margin: "-100px" }}
           className="bg-[#757575] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[3]"
         >
           <div className="w-[95%] sm:w-[85%] m-auto">
@@ -134,6 +137,7 @@ const WhyTrustUs = () => {
         {/* Column 4 */}
         <motion.div
           variants={fadeInVariants}
+          viewport={{ once: true, margin: "-100px" }}
           className="bg-[#8BFF30] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[2]"
         >
           <div className="w-[95%] sm:w-[85%] m-auto">
@@ -155,6 +159,7 @@ const WhyTrustUs = () => {
         {/* Column 5 */}
         <motion.div
           variants={fadeInVariants}
+          viewport={{ once: true, margin: "-100px" }}
           className="bg-[#757575] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[1]"
         >
           <div className="w-[95%] sm:w-[85%] m-auto">

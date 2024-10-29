@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import client from "../sanityClient";
 import prices from "../assets/images/pricelist.svg";
 import { motion } from "framer-motion";
-import LoadingSpinner from "./LoadingSpinner";
 
 const fadeInVariants = {
   initial: {
@@ -20,21 +19,24 @@ const fadeInVariants = {
 };
 
 const PriceList = () => {
-  const [priceListFile, setPriceListFile] = useState(null);
+  const [priceListData, setPriceListData] = useState(null);
 
   useEffect(() => {
     client
-      .fetch(`*[_type == "priceList"][0]`)
+      .fetch(`*[_type == "excelFile"][0]{
+        title,
+        description,
+        "fileUrl": file.asset->url
+      }`)
       .then((data) => {
-        if (data && data.file) {
-          console.log("File URL:", data.file.asset.url);
-          setPriceListFile(data.file.asset.url);
+        if (data) {
+          setPriceListData(data);
         }
       })
       .catch(console.error);
   }, []);
 
-  if (!priceListFile) return null;
+  if (!priceListData) return null;
 
   return (
     <motion.div
@@ -78,7 +80,13 @@ const PriceList = () => {
             СКАЧАТЬ ТАБЛИЦУ С АКТУАЛЬНЫМИ ЦЕНАМИ
           </p>
 
-          <a href={priceListFile} download className="w-full lg:w-auto">
+          <a 
+            href={priceListData.fileUrl} 
+            download 
+            className="w-full lg:w-auto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="w-full lg:w-auto bg-[#8BFF30] text-[#393939] 
                            px-8 sm:px-12 md:px-20 py-2 sm:py-3 
                            lg:ml-[30%]

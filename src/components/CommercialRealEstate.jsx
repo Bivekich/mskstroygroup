@@ -79,13 +79,13 @@ const CommercialRealEstate = ({ togglePopup }) => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#393939] text-white p-4 sm:p-6 md:p-8 flex flex-col xl:flex-row justify-between items-center w-[95%] md:w-[90%] m-auto mt-5 md:mt-10 mb-5 md:mb-10"
+      className="bg-[#393939] text-white p-4 sm:p-6 md:p-8 flex flex-col 2xl:flex-row justify-between w-[95%] md:w-[90%] m-auto mt-5 md:mt-10 mb-5 md:mb-10"
     >
-      <div className="w-full xl:w-[50%] flex flex-col justify-between">
+      <div className="w-full 2xl:w-[50%] flex flex-col justify-between">
         <h2 className="text-[32px] md:text-[43px] mb-4 leading-[36px] md:leading-[42px] font-roadRadio">
           {content.title}
         </h2>
-        <p className="mb-6 md:mb-8 text-[24px] md:text-[32px] leading-7 md:leading-9 w-full xl:w-[90%] font-light">
+        <p className="mb-6 md:mb-8 text-[24px] md:text-[32px] leading-7 md:leading-9 w-full 2xl:w-[90%] font-light">
           {content.description}
         </p>
         <div className="flex flex-col sm:flex-row justify-between text-[20px] md:text-[25px] text-[#757575] mb-6 md:mb-8 font-roadRadio leading-6 gap-6 sm:gap-0">
@@ -101,18 +101,18 @@ const CommercialRealEstate = ({ togglePopup }) => {
             <p className="w-full sm:w-[300px]">{content.individualApproach}</p>
           </div>
         </div>
-        <div className="hidden xl:block">
+        <div className="hidden 3xl:block">
           <motion.button
             variants={buttonVariants}
             whileHover="hover"
             onClick={togglePopup}
-            className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full xl:max-w-[350px] font-roadRadio font-semibold text-lg md:text-xl"
+            className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full 2xl:max-w-[350px] font-roadRadio font-semibold text-lg md:text-xl"
           >
             {content.buttonText}
           </motion.button>
         </div>
       </div>
-      <div className="xl:hidden w-full mt-6">
+      <div className="2xl:hidden w-full mt-6">
         <button 
           onClick={togglePopup}
           className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full hover:scale-[1.01] hover:bg-[#55b74a] transition font-roadRadio font-semibold text-lg md:text-xl"
@@ -121,7 +121,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
         </button>
       </div>
 
-      <div className="w-full xl:w-[50%] h-[40vh] xl:h-[65vh] relative overflow-hidden mt-6 xl:mt-0">
+      <div className="w-full 2xl:w-[50%] h-[40vh] 2xl:h-[65vh] relative overflow-hidden mt-6 2xl:mt-0">
         {images && images.length > 0 && (
           <motion.div
             key={currentImageIndex}
@@ -154,7 +154,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
           </motion.div>
         )}
 
-        <div className="flex relative mt-[200px] xs:mt-[270px] sm:mt-[220px] xl:mt-[60%] justify-center cursor-pointer ">
+        <div className="flex relative mt-[200px] xs:mt-[270px] sm:mt-[220px] 2xl:mt-[60%] justify-center cursor-pointer ">
           <motion.button
         
             onClick={handlePrevImage}

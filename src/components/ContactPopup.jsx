@@ -120,7 +120,7 @@ const ContactPopup = ({ togglePopup }) => {
             type="submit"
             className="w-full bg-[#8BFF30] hover:bg-[#55b74a] transition 
                      text-lg sm:text-xl md:text-2xl text-[#272727] font-bold 
-                     py-3 sm:py-4 px-4"
+                     py-3 sm:py-4 px-4 font-roadRadio" 
           >
             Отправить
           </button>

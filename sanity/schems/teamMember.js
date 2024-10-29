@@ -1,7 +1,7 @@
 // teamMember.js
 export default {
   name: 'teamMember',
-  title: 'Team Member',
+  title: 'Команда',
   type: 'document',
   fields: [
     {

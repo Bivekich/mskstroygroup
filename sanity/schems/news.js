@@ -1,7 +1,7 @@
 // schemas/news.js
 export default {
   name: 'news',
-  title: 'News',
+  title: 'Новости',
   type: 'document',
   fields: [
     {

@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
       variants={fadeInVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
       className="bg-[#393939] text-white py-5 sm:py-8 md:py-10 relative"
     >
       <h2 className="text-center text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[40px] sm:mb-[60px] md:mb-[80px] relative z-10">
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
             variants={fadeInVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="bg-[#757575] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img
@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
             variants={fadeInVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="bg-[#757575] lg:ml-[10%] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img
@@ -111,7 +111,7 @@ const TestimonialsSection = () => {
             variants={fadeInVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="bg-[#757575] lg:ml-[20%] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img
@@ -134,7 +134,7 @@ const TestimonialsSection = () => {
             variants={fadeInVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="bg-[#757575] lg:ml-[30%] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img

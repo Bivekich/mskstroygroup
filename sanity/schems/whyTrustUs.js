@@ -1,7 +1,7 @@
 // /src/schemas/whyTrustUs.js
 export default {
   name: 'whyTrustUs',
-  title: 'Why Trust Us Section',
+  title: 'Почему нам доверяют',
   type: 'document',
   fields: [
     {

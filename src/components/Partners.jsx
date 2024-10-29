@@ -48,7 +48,7 @@ const PartnerLogos = () => {
       variants={fadeInVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
       className="bg-[#393939] text-center flex flex-col justify-center items-center w-[95%] sm:w-[97%] m-auto mb-5 sm:mb-10 p-4 sm:p-8"
     >
       {/* Title */}
@@ -70,7 +70,7 @@ const PartnerLogos = () => {
             variants={fadeInVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="flex justify-center items-center duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             {partner.logo ? (

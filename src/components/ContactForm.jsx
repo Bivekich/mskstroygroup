@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,6 +8,7 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
+import client from "../sanityClient"; // Adjust the path as needed
 
 const fadeInVariants = {
   initial: {
@@ -26,11 +27,34 @@ const fadeInVariants = {
 
 
 const ContactForm = () => {
+  const [contactData, setContactData] = useState({
+    phone1: "",
+    phone2: "",
+    email: "",
+    workingHours: ""
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     comment: "",
   });
+
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "contactDetails"][0]{
+        phone1,
+        phone2,
+        email,
+        workingHours
+      }`)
+      .then((data) => {
+        if (data) {
+          setContactData(data);
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -88,14 +112,14 @@ const ContactForm = () => {
             <h2 className="text-[#8BFF30] text-4xl sm:text-5xl lg:text-7xl font-roadRadio mb-3 sm:mb-4 lg:mb-5">
               КОНТАКТЫ
             </h2>
-            <p> <a href="tel:89608605348">8 (960) 860–53–48</a></p>
-            <p> <a href="tel:84959741419">8 (495) 974–14–19</a></p>
-            <p> <a href="mailto:info@mskstroygroupp.ru">info@mskstroygroupp.ru</a></p>
+            <p><a href={`tel:${contactData.phone1?.replace(/[^\d+]/g, '')}`}>{contactData.phone1}</a></p>
+            <p><a href={`tel:${contactData.phone2?.replace(/[^\d+]/g, '')}`}>{contactData.phone2}</a></p>
+            <p><a href={`mailto:${contactData.email}`}>{contactData.email}</a></p>
             <p className="mt-3 lg:mt-5 text-[#393939]">
-              с 9:00 до 20:00 без выходных
+              {contactData.workingHours}
             </p>
 
-            <div className="flex mt-4 sm:mt-6 lg:mt-8 space-x-4 lg:space-x-5 text-[#8BFF30]">
+            {/* <div className="flex mt-4 sm:mt-6 lg:mt-8 space-x-4 lg:space-x-5 text-[#8BFF30]">
               <a href="#">
                 <FontAwesomeIcon
                   icon={faVk}
@@ -124,7 +148,7 @@ const ContactForm = () => {
                   className="sm:text-2xl lg:text-3xl"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div className="bg-[#757575] text-lg sm:text-xl lg:text-2xl w-full xl:w-[650px] p-6 sm:p-8 md:p-12 lg:p-[100px] text-white z-[5]">

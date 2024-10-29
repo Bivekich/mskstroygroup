@@ -2,7 +2,7 @@
 
 export default {
   name: 'partnerLogo',
-  title: 'Partner Logo',
+  title: 'Партнеры',
   type: 'document',
   fields: [
     {
