@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { client } from "../sanityClient";
+import { motion } from "framer-motion";
 
 const WhyTrustUs = () => {
   const [data, setData] = useState(null);
@@ -26,105 +27,152 @@ const WhyTrustUs = () => {
 
   if (!data) return null;
 
+  const containerVariants = {
+    animate: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const fadeInVariants = {
+    initial: {
+      opacity: 0,
+      y: 20,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <div className="bg-[#393939] text-white p-8 mb-8 relative">
-      <h2 className="text-center text-[#8BFF30] text-7xl font-roadRadio mb-[90px] relative z-10">
+    <div className="bg-[#393939] text-white p-4 sm:p-8 mb-4 sm:mb-8 relative">
+      <h2 className="text-center text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[90px] relative z-10">
         ПОЧЕМУ НАМ ДОВЕРЯЮТ
       </h2>
-      <div className="absolute inset-0 flex items-center justify-center  ">
-        <h1 className="text-[160px] text-[#757575] font-roadRadio absolute top-0  whitespace-nowrap">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-[40px] mt-10 rwrap:mt-0 top-8 sm:text-[70px] sm:top-12 md:text-[100px] md:top-7 xl:top-0 xl:text-[160px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
           ПРИЕМУЩЕСТВА
         </h1>
       </div>
 
-      <div className="grid grid-cols-5 relative">
-        <div className="bg-[#757575] p-4 pb-8 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[5]">
-          <div className="w-[90%] m-auto ">
-            <div className="text-[#393939] text-center my-4 mb-6">
+      <motion.div
+        variants={containerVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 m:gap-6"
+      >
+        {/* Column 1 */}
+        <motion.div
+          variants={fadeInVariants}
+          className="bg-[#757575] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[5]"
+        >
+          <div className="w-[95%] sm:w-[90%] m-auto">
+            <div className="text-[#393939] text-center my-3 sm:my-4 mb-4 sm:mb-6">
               <FontAwesomeIcon
                 icon={faShieldHalved}
-                className=" bg-[#8BFF30] text-5xl rounded-full p-6"
+                className="bg-[#8BFF30] text-3xl sm:text-4xl md:text-5xl rounded-full p-4 sm:p-6"
               />
             </div>
-
-            <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide ">
+            <h3 className="font-bold text-xl sm:text-2xl mb-2 font-roadRadio tracking-wide text-center sm:text-left">
               {data.title1}
             </h3>
-            <p className=" text-2xl tracking-wide font-gilroy">
+            <p className="text-lg sm:text-xl md:text-2xl tracking-wide font-gilroy">
               {data.description1}
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Column 2 */}
-        <div className="bg-[#8BFF30] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[4]">
-          <div className="w-[85%] m-auto">
-            <div className=" text-white text-center my-4 mb-5">
+        <motion.div
+          variants={fadeInVariants}
+          className="bg-[#8BFF30] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[4]"
+        >
+          <div className="w-[95%] sm:w-[85%] m-auto">
+            <div className="text-white text-center my-3 sm:my-4 mb-4 sm:mb-5">
               <FontAwesomeIcon
                 icon={faMoneyBillWave}
-                className=" bg-[#757575] text-5xl rounded-full p-5 py-[24px]"
+                className="bg-[#757575] text-3xl sm:text-4xl md:text-5xl rounded-full p-4 sm:p-5 py-[20px] sm:py-[24px]"
               />
             </div>
-            <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide text-[#393939]">
+            <h3 className="font-bold text-xl sm:text-2xl mb-2 font-roadRadio tracking-wide text-[#393939] text-center sm:text-left">
               {data.title2}
             </h3>
-            <p className="text-2xl font-gilroy tracking-wide text-[#393939]">
+            <p className="text-lg sm:text-xl md:text-2xl font-gilroy tracking-wide text-[#393939]">
               {data.description2}
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-[#757575] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[3]">
-          <div className="w-[85%] m-auto">
-            <div className="text-[#393939] text-center my-4 mb-5">
+        {/* Column 3 */}
+        <motion.div
+          variants={fadeInVariants}
+          className="bg-[#757575] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[3]"
+        >
+          <div className="w-[95%] sm:w-[85%] m-auto">
+            <div className="text-[#393939] text-center my-3 sm:my-4 mb-4 sm:mb-5">
               <FontAwesomeIcon
                 icon={faCompassDrafting}
-                className=" bg-[#8BFF30] text-5xl rounded-full p-6"
+                className="bg-[#8BFF30] text-3xl sm:text-4xl md:text-5xl rounded-full p-4 sm:p-6"
               />
             </div>
-            <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide">
+            <h3 className="font-bold text-xl sm:text-2xl mb-2 font-roadRadio tracking-wide text-center sm:text-left">
               {data.title3}
             </h3>
-            <pc className=" text-2xl font-gilroy tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl font-gilroy tracking-wide">
               {data.description3}
-            </pc>
+            </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-[#8BFF30] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[2]">
-          <div className="w-[85%] m-auto">
-            <div className="text-white text-center my-4 mb-5">
+        {/* Column 4 */}
+        <motion.div
+          variants={fadeInVariants}
+          className="bg-[#8BFF30] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[2]"
+        >
+          <div className="w-[95%] sm:w-[85%] m-auto">
+            <div className="text-white text-center my-3 sm:my-4 mb-4 sm:mb-5">
               <FontAwesomeIcon
                 icon={faLayerGroup}
-                className=" bg-[#757575] text-5xl rounded-full p-6 px-5"
+                className="bg-[#757575] text-3xl sm:text-4xl md:text-5xl rounded-full p-4 sm:p-6 px-4 sm:px-5"
               />
             </div>
-            <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide text-[#393939]">
+            <h3 className="font-bold text-xl sm:text-2xl mb-2 font-roadRadio tracking-wide text-[#393939] text-center sm:text-left">
               {data.title4}
             </h3>
-            <p className=" text-2xl font-gilroy tracking-wide text-[#393939]">
+            <p className="text-lg sm:text-xl md:text-2xl font-gilroy tracking-wide text-[#393939]">
               {data.description4}
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-[#757575] p-4">
-          <div className="w-[85%] m-auto">
-            <div className="text-[#393939] text-center my-4 mb-5">
+        {/* Column 5 */}
+        <motion.div
+          variants={fadeInVariants}
+          className="bg-[#757575] p-4 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] z-[1]"
+        >
+          <div className="w-[95%] sm:w-[85%] m-auto">
+            <div className="text-[#393939] text-center my-3 sm:my-4 mb-4 sm:mb-5">
               <FontAwesomeIcon
                 icon={faFileContract}
-                className=" bg-[#8BFF30] text-5xl rounded-full p-6 px-[30px]"
+                className="bg-[#8BFF30] text-3xl sm:text-4xl md:text-5xl rounded-full p-4 sm:p-6 px-[20px] sm:px-[30px]"
               />
             </div>
-            <h3 className="font-bold text-2xl mb-2 font-roadRadio tracking-wide flex justify-center">
+            <h3 className="font-bold text-xl sm:text-2xl mb-2 font-roadRadio tracking-wide text-center sm:text-left">
               {data.title5}
             </h3>
-            <p className=" text-2xl font-gilroy tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl font-gilroy tracking-wide">
               {data.description5}
             </p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

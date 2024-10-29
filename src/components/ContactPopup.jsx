@@ -49,56 +49,78 @@ const ContactPopup = ({ togglePopup }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] p-4"
       onClick={togglePopup}
     >
       <div
-        className="bg-[#505050] py-[75px] shadow-lg text-white relative w-[27%] text-center flex flex-col justify-center"
+        className="bg-[#505050] py-8 sm:py-12 md:py-16 lg:py-[75px] shadow-lg text-white relative 
+                 w-full sm:w-[85%] md:w-[70%] lg:w-[50%] xl:w-[27%] 
+                 text-center flex flex-col justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className=" mb-4 text-4xl font-roadRadio">ЗАКАЗАТЬ ЗВОНОК</h2>
-        <p className="mb-6 font-light text-2xl w-[70%] m-auto">
+        <h2 className="mb-3 sm:mb-4 lg:mb-6 text-2xl sm:text-3xl md:text-4xl font-roadRadio px-4">
+          ЗАКАЗАТЬ ЗВОНОК
+        </h2>
+        <p className="mb-4 sm:mb-5 lg:mb-6 font-light text-lg sm:text-xl md:text-2xl 
+                    w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] m-auto px-4">
           Оставьте заявку, и наш эксперт ответит на все ваши вопросы
         </p>
 
         {/* Form */}
-        <form className="w-[70%] m-auto" onSubmit={handleSubmit}>
-          <div className="mb-4">
+        <form 
+          className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] m-auto px-4" 
+          onSubmit={handleSubmit}
+        >
+          <div className="mb-3 sm:mb-4">
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-900 border-[2px] border-[#272727] bg-[#505050] placeholder:text-xl placeholder:text-white placeholder:font-light focus:outline-none focus:ring-2 focus:ring-lime-500"
+              className="w-full px-3 py-2 sm:py-3 text-white border-[2px] border-[#272727] 
+                       bg-[#505050] text-base sm:text-lg md:text-xl
+                       placeholder:text-base sm:placeholder:text-lg md:placeholder:text-xl 
+                       placeholder:text-white placeholder:font-light 
+                       focus:outline-none focus:ring-2 focus:ring-lime-500"
               placeholder="Имя"
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-3 sm:mb-4">
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-900 border-[2px] border-[#272727] bg-[#505050] placeholder:text-xl placeholder:text-white placeholder:font-light focus:outline-none focus:ring-2 focus:ring-lime-500"
+              className="w-full px-3 py-2 sm:py-3 text-white border-[2px] border-[#272727] 
+                       bg-[#505050] text-base sm:text-lg md:text-xl
+                       placeholder:text-base sm:placeholder:text-lg md:placeholder:text-xl 
+                       placeholder:text-white placeholder:font-light 
+                       focus:outline-none focus:ring-2 focus:ring-lime-500"
               placeholder="Телефон"
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-3 sm:mb-4">
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-900 border-[2px] border-[#272727] bg-[#505050] placeholder:text-xl placeholder:text-white placeholder:font-light focus:outline-none focus:ring-2 focus:ring-lime-500"
+              className="w-full px-3 py-2 sm:py-3 text-white border-[2px] border-[#272727] 
+                       bg-[#505050] text-base sm:text-lg md:text-xl
+                       placeholder:text-base sm:placeholder:text-lg md:placeholder:text-xl 
+                       placeholder:text-white placeholder:font-light 
+                       focus:outline-none focus:ring-2 focus:ring-lime-500"
               placeholder="Email"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-[#8BFF30] hover:bg-[#55b74a] transition text-xl text-[#272727] font-bold py-4 px-4"
+            className="w-full bg-[#8BFF30] hover:bg-[#55b74a] transition 
+                     text-lg sm:text-xl md:text-2xl text-[#272727] font-bold 
+                     py-3 sm:py-4 px-4"
           >
             Отправить
           </button>
@@ -107,7 +129,8 @@ const ContactPopup = ({ togglePopup }) => {
         {/* Close Button */}
         <button
           onClick={togglePopup}
-          className="absolute top-2 right-4 text-gray-400 hover:text-[#8BFF30] transition text-4xl"
+          className="absolute top-2 right-4 text-gray-400 hover:text-[#8BFF30] transition 
+                   text-3xl sm:text-4xl"
         >
           &times;
         </button>

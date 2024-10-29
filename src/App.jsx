@@ -15,23 +15,8 @@ import Services from "./components/Services";
 import News from "./components/News";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "toastr/build/toastr.min.css";
-import { useRef } from "react";
 
 function App() {
-  // Refs for each section
-  const commercialRealEstateRef = useRef(null);
-  const ourProjectsRef = useRef(null);
-  const whyTrustUsRef = useRef(null);
-  const partnersRef = useRef(null);
-  const teamSectionRef = useRef(null);
-  const reviewsRef = useRef(null);
-  const contactUsMainRef = useRef(null);
-
-  // Function to handle smooth scrolling to a section
-  const handleScroll = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <Router>
       <Routes>
@@ -39,40 +24,23 @@ function App() {
           path="/"
           element={
             <>
-              {/* Pass the handleScroll function and refs to Navbar */}
-              <Navbar
-                onScroll={handleScroll}
-                sections={{
-                  commercialRealEstateRef,
-                  ourProjectsRef,
-                  whyTrustUsRef,
-                  partnersRef,
-                  teamSectionRef,
-                  reviewsRef,
-                  contactUsMainRef,
-                }}
-              />
-              <div ref={commercialRealEstateRef}>
-                <CommercialRealEstate />
-              </div>
-              <div ref={ourProjectsRef}>
-                <OurProjects />
-              </div>
-              <div ref={whyTrustUsRef}>
-                <WhyTrustUs />
-              </div>
-              <div ref={partnersRef}>
-                <Partners />
-              </div>
-              <div ref={teamSectionRef}>
-                <TeamSection />
-              </div>
-              <div ref={reviewsRef}>
-                <Reviews />
-              </div>
-              <div ref={contactUsMainRef}>
-                <ContactUsMain />
-              </div>
+              <Navbar />
+              <CommercialRealEstate />
+              <WhyTrustUs />
+              <Partners />
+              <TeamSection />
+              <Reviews />
+              <ContactUsMain />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/Projects"
+          element={
+            <>
+              <Navbar />
+              <OurProjects />
               <Footer />
             </>
           }
@@ -81,18 +49,7 @@ function App() {
           path="/Contacts"
           element={
             <>
-              <Navbar
-                onScroll={handleScroll}
-                sections={{
-                  commercialRealEstateRef,
-                  ourProjectsRef,
-                  whyTrustUsRef,
-                  partnersRef,
-                  teamSectionRef,
-                  reviewsRef,
-                  contactUsMainRef,
-                }}
-              />
+              <Navbar />
               <ContactForm />
               <Footer />
             </>
@@ -102,18 +59,7 @@ function App() {
           path="/Prices"
           element={
             <>
-              <Navbar
-                onScroll={handleScroll}
-                sections={{
-                  commercialRealEstateRef,
-                  ourProjectsRef,
-                  whyTrustUsRef,
-                  partnersRef,
-                  teamSectionRef,
-                  reviewsRef,
-                  contactUsMainRef,
-                }}
-              />
+              <Navbar />
               <OurPrices />
               <Services />
               <Footer />
@@ -124,18 +70,7 @@ function App() {
           path="/News"
           element={
             <>
-              <Navbar
-                onScroll={handleScroll}
-                sections={{
-                  commercialRealEstateRef,
-                  ourProjectsRef,
-                  whyTrustUsRef,
-                  partnersRef,
-                  teamSectionRef,
-                  reviewsRef,
-                  contactUsMainRef,
-                }}
-              />
+              <Navbar />
               <News />
               <Footer />
             </>

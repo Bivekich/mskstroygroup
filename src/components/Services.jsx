@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import client from "../sanityClient"; // Adjust the path as needed
+import client from "../sanityClient";
 
 const CompanyServices = () => {
   const [services, setServices] = useState([]);
@@ -11,7 +11,7 @@ const CompanyServices = () => {
           _id,
           title,
           description,
-          "iconUrl": icon.asset->url // Fetch icon URL
+          "iconUrl": icon.asset->url
         }`
       )
       .then((data) => setServices(data))
@@ -19,34 +19,43 @@ const CompanyServices = () => {
   }, []);
 
   return (
-    <div className="bg-[#393939] p-8 min-h-screen flex flex-col items-center w-[75%] m-auto mb-20">
-      <div className="relative text-center mb-10">
-        <h2 className="text-[#8BFF30] text-7xl font-roadRadio mb-[90px] relative z-10">
+    <div className="bg-[#393939] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[95%] sm:w-[90%] md:w-[85%] xl:w-[75%] m-auto mb-10 sm:mb-15 md:mb-20">
+      {/* Title Section */}
+      <div className="relative text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+        <h2
+          className="text-[#8BFF30] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-roadRadio 
+                      mb-[45px] sm:mb-[60px] md:mb-[75px] lg:mb-[90px] relative z-10"
+        >
           УСЛУГИ КОМПАНИИ
         </h2>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-[160px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
+          <h1
+            className="text-[40px] top-8 sm:text-[70px] sm:top-12 md:text-[100px] md:top-7 
+                        lg:text-[130px] lg:top-4 xl:text-[160px] xl:top-0 
+                        text-[#757575] font-roadRadio absolute whitespace-nowrap"
+          >
             УСЛУГИ
           </h1>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-[80px] w-full text-white">
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-[80px] w-full text-white">
         {services.map((service, index) => {
-          // Determine row and column based on index in 2-column grid
           const isEvenRow = Math.floor(index / 2) % 2 === 0;
           const isLeftColumn = index % 2 === 0;
           const iconColor = isEvenRow
             ? isLeftColumn
-              ? "bg-[#8BFF30] text-black" // Green for left column in even rows
-              : "bg-white text-[#8BFF30]" // White for right column in even rows
+              ? "bg-[#8BFF30] text-black"
+              : "bg-white text-[#8BFF30]"
             : isLeftColumn
-            ? "bg-white text-[#8BFF30]" // White for left column in odd rows
-            : "bg-[#8BFF30] text-black"; // Green for right column in odd rows
+            ? "bg-white text-[#8BFF30]"
+            : "bg-[#8BFF30] text-black";
 
           return (
             <div
               key={service._id}
-              className="bg-[#707070] p-8 text-white hover:shadow-xl transition-all min-h-[500px]"
+              className="bg-[#707070] p-4 sm:p-6 md:p-8 text-white hover:shadow-xl transition-all min-h-[500px]"
             >
               <div className="flex mb-4 ml-10">
                 <div
