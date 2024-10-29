@@ -48,7 +48,7 @@ const PriceList = () => {
     >
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-12 md:mb-16">
-        <h2 className="text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[60px] md:mb-[90px] relative z-10">
+        <h2 className="text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[100px] md:mb-[140px] relative z-10">
           НАШИ ЦЕНЫ
         </h2>
         <div className="absolute z-[1] inset-0 flex items-center justify-center">
