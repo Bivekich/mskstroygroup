@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import client from "../sanityClient";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +21,24 @@ const ContactForm = () => {
     e.preventDefault();
     console.log(formData);
   };
+
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "reviews"]{
+            name1, description1,
+            name2, description2,
+            name3, description3,
+            name4, description4
+          }`
+      )
+      .then((data) => setTestimonials(data))
+      .catch(console.error);
+  }, []);
+
+  if (!testimonials.length) return null;
 
   return (
     <div className="bg-[#393939] flex flex-col justify-center items-center py-8 sm:py-12 md:py-16 mb-10 sm:mb-16 md:mb-20">

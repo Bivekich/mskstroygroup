@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import client, { urlFor } from "../sanityClient"; // Adjust the path as needed
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { motion } from "framer-motion";
+import LoadingSpinner from "./LoadingSpinner";
 
 const fadeInVariants = {
   initial: {
@@ -14,6 +14,27 @@ const fadeInVariants = {
     transition: {
       duration: 0.6,
       ease: "easeOut",
+    },
+  },
+};
+
+const buttonVariants = {
+  hover: {
+    scale: 1.05,
+    backgroundColor: "#55b74a",
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const imageVariants = {
+  hover: {
+    scale: 1.03,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
     },
   },
 };
@@ -32,7 +53,7 @@ const CommercialRealEstate = () => {
 
   if (!content) {
     return (
-      <div className="text-white font-roadRadio text-center text-5xl"></div>
+      <LoadingSpinner />
     );
   }
 
@@ -81,9 +102,13 @@ const CommercialRealEstate = () => {
           </div>
         </div>
         <div className="hidden xl:block">
-          <button className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full xl:max-w-[350px] hover:scale-[1.01] hover:bg-[#55b74a] transition font-roadRadio font-semibold text-lg md:text-xl">
+          <motion.button
+            variants={buttonVariants}
+            whileHover="hover"
+            className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full xl:max-w-[350px] font-roadRadio font-semibold text-lg md:text-xl"
+          >
             {content.buttonText}
-          </button>
+          </motion.button>
         </div>
       </div>
       <div className="xl:hidden w-full mt-6">
@@ -94,38 +119,51 @@ const CommercialRealEstate = () => {
 
       <div className="w-full xl:w-[50%] h-[40vh] xl:h-[65vh] relative overflow-hidden mt-6 xl:mt-0">
         {images && images.length > 0 && (
-          <TransitionGroup component={null}>
-            <CSSTransition
-              key={currentImageIndex}
-              timeout={500}
-              classNames={
-                slideDirection === "next" ? "slide-next" : "slide-prev"
-              }
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img
-                  src={urlFor(images[currentImageIndex]).url()}
-                  alt={`Carousel image ${currentImageIndex + 1}`}
-                  className="object-cover h-full w-full"
-                />
-              </div>
-            </CSSTransition>
-          </TransitionGroup>
+          <motion.div
+            key={currentImageIndex}
+            initial={{ 
+              x: slideDirection === "next" ? 1000 : -1000,
+              opacity: 0 
+            }}
+            animate={{ 
+              x: 0,
+              opacity: 1 
+            }}
+            exit={{ 
+              x: slideDirection === "next" ? -1000 : 1000,
+              opacity: 0 
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30
+            }}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <motion.img
+              variants={imageVariants}
+              whileHover="hover"
+              src={urlFor(images[currentImageIndex]).url()}
+              alt={`Carousel image ${currentImageIndex + 1}`}
+              className="object-cover h-full w-full"
+            />
+          </motion.div>
         )}
 
-        <div className="flex relative mt-[200px] xs:mt-[270px] sm:mt-[220px] xl:mt-[60%] justify-center cursor-pointer">
-          <button
+        <div className="flex relative mt-[200px] xs:mt-[270px] sm:mt-[220px] xl:mt-[60%] justify-center cursor-pointer ">
+          <motion.button
+        
             onClick={handlePrevImage}
-            className="text-[#5c5c5c] text-3xl md:text-4xl px-2 md:px-3 py-1 size-[60px] md:size-[80px] duration-500 bg-[#8BFF30] hover:bg-[#50824a] z-5 shadow-3xl hover:text-gray-300 transition relative"
+            className="text-[#5c5c5c] text-3xl md:text-4xl px-2 md:px-3 py-1 size-[60px] md:size-[80px] bg-[#8BFF30] hover:bg-[#50824a] z-5 shadow-3xl hover:text-gray-300 transition relative"
           >
             &lt;
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={handleNextImage}
-            className="text-[#5c5c5c] text-3xl md:text-4xl px-2 md:px-3 py-1 size-[60px] md:size-[80px] duration-500 bg-[#8BFF30] hover:bg-[#50824a] hover:text-gray-300 transition"
+            className="text-[#5c5c5c] text-3xl md:text-4xl px-2 md:px-3 py-1 size-[60px] md:size-[80px] bg-[#8BFF30] hover:bg-[#50824a] hover:text-gray-300 transition"
           >
             &gt;
-          </button>
+          </motion.button>
         </div>
       </div>
     </motion.div>

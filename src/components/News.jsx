@@ -1,5 +1,22 @@
 import React, { useEffect, useState } from "react";
 import client, { urlFor } from "../sanityClient"; // Adjust the path as needed
+import { motion } from "framer-motion";
+import LoadingSpinner from "./LoadingSpinner";
+
+const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 const NewsComponent = () => {
   const [news, setNews] = useState([]);
@@ -20,11 +37,18 @@ const NewsComponent = () => {
   }, []);
 
   if (!news.length) {
-    return <p className="text-white text-3xl text-center">Loading news...</p>;
+    return <LoadingSpinner />;
   }
 
+
   return (
-    <div className="bg-[#393939] font-gilroy text-white p-4 sm:p-6 md:p-8 flex flex-col items-center w-[95%] sm:w-[90%] m-auto mt-5 sm:mt-8 md:mt-10 mb-5 sm:mb-8 md:mb-10">
+    <motion.div
+      variants={fadeInVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className="bg-[#393939] font-gilroy text-white p-4 sm:p-6 md:p-8 flex flex-col items-center w-[95%] sm:w-[90%] m-auto mt-5 sm:mt-8 md:mt-10 mb-5 sm:mb-8 md:mb-10"
+    >
       <div className="relative text-center mb-8 sm:mb-12 md:mb-16">
         <h2 className="text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[60px] md:mb-[90px] relative z-10">
           НОВОСТИ
@@ -37,8 +61,12 @@ const NewsComponent = () => {
       </div>
 
       {news.map((item) => (
-        <div
+        <motion.div
           key={item._id}
+          variants={fadeInVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
           className="bg-[#757575] shadow-top relative mt-[-25px] sm:mt-[-35px] md:mt-[-50px] z-[2] text-white p-4 sm:p-8 md:p-[65px] flex flex-col xl:flex-row w-full mb-8 sm:mb-12 md:mb-20"
         >
           <div className="w-full xl:w-[40%] mb-4 xl:mb-0">
@@ -63,9 +91,9 @@ const NewsComponent = () => {
               {new Date(item.date).toLocaleString()}
             </p>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

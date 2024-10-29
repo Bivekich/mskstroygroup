@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVk,
@@ -7,9 +8,30 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 
+const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+
 const ContactForm = () => {
   return (
-    <div className="bg-white relative">
+    <motion.div 
+      variants={fadeInVariants}
+      initial="initial"
+      animate="animate"
+      className="bg-white relative"
+    >
       <iframe
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A5c2437b4c89a02f758b02d092a191df0092fb0faf3c8569e485938c5f9448cb8&amp;source=constructor"
         width="1280"
@@ -96,7 +118,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

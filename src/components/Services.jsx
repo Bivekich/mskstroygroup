@@ -1,5 +1,22 @@
 import React, { useEffect, useState } from "react";
 import client from "../sanityClient";
+import { motion } from "framer-motion";
+import LoadingSpinner from "./LoadingSpinner";
+
+const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 const CompanyServices = () => {
   const [services, setServices] = useState([]);
@@ -18,8 +35,16 @@ const CompanyServices = () => {
       .catch(console.error);
   }, []);
 
+  if (!services.length) return <LoadingSpinner />;
+
   return (
-    <div className="bg-[#393939] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[95%] sm:w-[90%] md:w-[85%] xl:w-[75%] m-auto mb-10 sm:mb-15 md:mb-20">
+    <motion.div
+      variants={fadeInVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className="bg-[#393939] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[95%] sm:w-[90%] md:w-[85%] xl:w-[75%] m-auto mb-10 sm:mb-15 md:mb-20"
+    >
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         <h2
@@ -53,8 +78,12 @@ const CompanyServices = () => {
             : "bg-[#8BFF30] text-black";
 
           return (
-            <div
+            <motion.div
               key={service._id}
+              variants={fadeInVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
               className="bg-[#707070] p-4 sm:p-6 md:p-8 text-white hover:shadow-xl transition-all min-h-[500px]"
             >
               <div className="flex mb-4 ml-10">
@@ -78,11 +107,11 @@ const CompanyServices = () => {
               <p className="text-3xl font-light text-left ml-10 mb-10">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

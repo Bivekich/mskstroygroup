@@ -1,6 +1,23 @@
 import React, { useEffect, useState } from "react";
 import client from "../sanityClient";
 import prices from "../assets/images/pricelist.svg";
+import { motion } from "framer-motion";
+import LoadingSpinner from "./LoadingSpinner";
+
+const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 const PriceList = () => {
   const [priceListFile, setPriceListFile] = useState(null);
@@ -17,8 +34,16 @@ const PriceList = () => {
       .catch(console.error);
   }, []);
 
+  if (!priceListFile) return null;
+
   return (
-    <div className="bg-[#393939] flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 w-[97%] m-auto mb-10 sm:mb-15 md:mb-20">
+    <motion.div
+      variants={fadeInVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className="bg-[#393939] text-white p-4 sm:p-8 relative mt-5 sm:mt-10 mb-5 sm:mb-10"
+    >
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-12 md:mb-16">
         <h2 className="text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[60px] md:mb-[90px] relative z-10">
@@ -53,7 +78,7 @@ const PriceList = () => {
             СКАЧАТЬ ТАБЛИЦУ С АКТУАЛЬНЫМИ ЦЕНАМИ
           </p>
 
-          <a href="../assets/prais.xlsx" download className="w-full lg:w-auto">
+          <a href={priceListFile} download className="w-full lg:w-auto">
             <button className="w-full lg:w-auto bg-[#8BFF30] text-[#393939] 
                            px-8 sm:px-12 md:px-20 py-2 sm:py-3 
                            lg:ml-[30%]
@@ -65,7 +90,7 @@ const PriceList = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
