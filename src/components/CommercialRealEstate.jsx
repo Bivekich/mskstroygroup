@@ -39,7 +39,7 @@ const imageVariants = {
   },
 };
 
-const CommercialRealEstate = () => {
+const CommercialRealEstate = ({ togglePopup }) => {
   const [content, setContent] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState("next");
@@ -105,6 +105,7 @@ const CommercialRealEstate = () => {
           <motion.button
             variants={buttonVariants}
             whileHover="hover"
+            onClick={togglePopup}
             className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full xl:max-w-[350px] font-roadRadio font-semibold text-lg md:text-xl"
           >
             {content.buttonText}
@@ -112,7 +113,10 @@ const CommercialRealEstate = () => {
         </div>
       </div>
       <div className="xl:hidden w-full mt-6">
-        <button className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full hover:scale-[1.01] hover:bg-[#55b74a] transition font-roadRadio font-semibold text-lg md:text-xl">
+        <button 
+          onClick={togglePopup}
+          className="bg-[#8BFF30] text-[#393939] py-4 md:py-5 w-full hover:scale-[1.01] hover:bg-[#55b74a] transition font-roadRadio font-semibold text-lg md:text-xl"
+        >
           {content.buttonText}
         </button>
       </div>

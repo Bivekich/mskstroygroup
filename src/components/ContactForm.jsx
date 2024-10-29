@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +7,7 @@ import {
   faInstagram,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import axios from "axios";
 
 const fadeInVariants = {
   initial: {
@@ -25,8 +26,49 @@ const fadeInVariants = {
 
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    comment: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const botToken = "7880849860:AAF23EpxsNYRlCX6ZZ2nIAMby8xduW1upCE";
+    const chatId = "-4565147881";
+
+    const message = `
+      ВОПРОС С КОНТАКТНОЙ ФОРМЫ
+      Имя: ${formData.name}
+      Телефон: ${formData.phone}
+      Комментарий: ${formData.comment}
+    `;
+
+    try {
+      await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        chat_id: chatId,
+        text: message,
+      });
+      alert("Сообщение успешно отправлено!");
+      setFormData({ name: "", phone: "", comment: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Ошибка отправки. Пожалуйста, попробуйте снова.");
+    }
+  };
+
   return (
     <motion.div 
+      id="contactForm"
       variants={fadeInVariants}
       initial="initial"
       animate="animate"
@@ -46,9 +88,9 @@ const ContactForm = () => {
             <h2 className="text-[#8BFF30] text-4xl sm:text-5xl lg:text-7xl font-roadRadio mb-3 sm:mb-4 lg:mb-5">
               КОНТАКТЫ
             </h2>
-            <p>8 (960) 860–53–48</p>
-            <p>8 (495) 974–14–19</p>
-            <p className="mt-2 lg:mt-3">info@mskstroygroupp.ru</p>
+            <p> <a href="tel:89608605348">8 (960) 860–53–48</a></p>
+            <p> <a href="tel:84959741419">8 (495) 974–14–19</a></p>
+            <p> <a href="mailto:info@mskstroygroupp.ru">info@mskstroygroupp.ru</a></p>
             <p className="mt-3 lg:mt-5 text-[#393939]">
               с 9:00 до 20:00 без выходных
             </p>
@@ -93,19 +135,28 @@ const ContactForm = () => {
               Оставьте заявку, а наш эксперт ответит на все ваши вопросы
             </p>
 
-            <form className="space-y-3 sm:space-y-4 lg:space-y-5 font-light">
+            <form className="space-y-3 sm:space-y-4 lg:space-y-5 font-light" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Имя"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="w-full p-2 sm:p-3 bg-[#757575] border border-gray-800 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-lime-500"
               />
               <input
                 type="text"
                 placeholder="Телефон"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 className="w-full p-2 sm:p-3 bg-[#757575] border border-gray-900 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-lime-500"
               />
               <textarea
                 placeholder="Комментарий"
+                name="comment"
+                value={formData.comment}
+                onChange={handleChange}
                 className="w-full p-2 sm:p-3 bg-[#757575] border border-gray-800 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-lime-500 h-24 sm:h-28 lg:h-32"
               ></textarea>
               <button

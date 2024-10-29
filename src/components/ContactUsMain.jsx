@@ -1,25 +1,47 @@
 import React, { useState, useEffect } from "react";
 import client from "../sanityClient";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
-    message: "",
+    comment: "",
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    const botToken = "7880849860:AAF23EpxsNYRlCX6ZZ2nIAMby8xduW1upCE";
+    const chatId = "-4565147881";
+
+    const message = `
+      ВОПРОС СО СТРАНИЦЫ "СВЯЗАТЬСЯ С НАМИ"
+      Имя: ${formData.name}
+      Телефон: ${formData.phone}
+      Комментарий: ${formData.comment}
+    `;
+
+    try {
+      await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        chat_id: chatId,
+        text: message,
+      });
+      alert("Сообщение успешно отправлено!");
+      setFormData({ name: "", phone: "", comment: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Ошибка отправки. Пожалуйста, попробуйте снова.");
+    }
   };
 
   const [testimonials, setTestimonials] = useState([]);
@@ -67,15 +89,6 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Телефон"
-              className="w-full p-2.5 sm:p-3 md:p-4 bg-transparent border border-[#757575] text-gray-300 placeholder-white text-base sm:text-lg md:text-xl focus:outline-none focus:ring-2 focus:ring-lime-500"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email"
               className="w-full p-2.5 sm:p-3 md:p-4 bg-transparent border border-[#757575] text-gray-300 placeholder-white text-base sm:text-lg md:text-xl focus:outline-none focus:ring-2 focus:ring-lime-500"
               required
             />

@@ -6,8 +6,18 @@ import {
   faInstagram,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const scrollToContactForm = () => {
+    navigate('/Contacts');
+    setTimeout(() => {
+      document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="text-white py-10">
       <footer className="w-[87%] m-auto">
@@ -48,16 +58,18 @@ const Footer = () => {
           </div>
 
           <div className="text-[18px] md:text-[24px] space-y-3 flex-col md:ml-[-120px]">
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-[50%] text-center xl:text-left">
-              <p>ГЛАВНАЯ</p>
-              <p>УСЛУГИ</p>
+            <div className="flex flex-col xl:flex-row gap-4 xl:gap-20 text-center xl:text-left">
+              <Link to="/News" className="hover:text-[#8BFF30] transition-colors">НОВОСТИ</Link>
+              <Link to="/Prices" className="hover:text-[#8BFF30] transition-colors">УСЛУГИ</Link>
             </div>
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-[70%] text-center xl:text-left">
-              <p>ЦЕНЫ</p>
-              <p>КОНТАКТЫ</p>
-            </div>
-            <div className="flex justify-center xl:justify-start">
-              <p>ПРОЕКТЫ</p>
+            <div className="flex flex-col xl:flex-row gap-4 xl:gap-20 text-center xl:text-left">
+              <Link to="/Projects" className="hover:text-[#8BFF30] transition-colors">ПРОЕКТЫ</Link>
+              <button 
+                onClick={scrollToContactForm}
+                className="hover:text-[#8BFF30] transition-colors text-left"
+              >
+                КОНТАКТЫ
+              </button>
             </div>
           </div>
 

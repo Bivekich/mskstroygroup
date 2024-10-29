@@ -6,7 +6,7 @@ const ContactPopup = ({ togglePopup }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
+    comment: "",
   });
 
   // Update form data as the user types
@@ -31,7 +31,7 @@ const ContactPopup = ({ togglePopup }) => {
       ЗАКАЗ ЗВОНКА
       Имя: ${formData.name}
       Телефон: ${formData.phone}
-      Email: ${formData.email}
+      Комментарий: ${formData.comment}
     `;
 
     try {
@@ -54,7 +54,7 @@ const ContactPopup = ({ togglePopup }) => {
     >
       <div
         className="bg-[#505050] py-8 sm:py-12 md:py-16 lg:py-[75px] shadow-lg text-white relative 
-                 w-full sm:w-[85%] md:w-[70%] lg:w-[50%] xl:w-[27%] 
+                 w-full sm:w-[85%] md:w-[70%] lg:w-[50%] xl:w-[30%] 
                  text-center flex flex-col justify-center"
         onClick={(e) => e.stopPropagation()}
       >
@@ -68,7 +68,7 @@ const ContactPopup = ({ togglePopup }) => {
 
         {/* Form */}
         <form 
-          className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] m-auto px-4" 
+          className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-[85%] m-auto px-4" 
           onSubmit={handleSubmit}
         >
           <div className="mb-3 sm:mb-4">
@@ -102,17 +102,17 @@ const ContactPopup = ({ togglePopup }) => {
             />
           </div>
           <div className="mb-3 sm:mb-4">
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
+            <textarea
+              name="comment"
+              value={formData.comment}
               onChange={handleChange}
               className="w-full px-3 py-2 sm:py-3 text-white border-[2px] border-[#272727] 
                        bg-[#505050] text-base sm:text-lg md:text-xl
                        placeholder:text-base sm:placeholder:text-lg md:placeholder:text-xl 
                        placeholder:text-white placeholder:font-light 
-                       focus:outline-none focus:ring-2 focus:ring-lime-500"
-              placeholder="Email"
+                       focus:outline-none focus:ring-2 focus:ring-lime-500
+                       min-h-[100px] resize-none"
+              placeholder="Комментарий"
               required
             />
           </div>

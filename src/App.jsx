@@ -15,8 +15,16 @@ import Services from "./components/Services";
 import News from "./components/News";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "toastr/build/toastr.min.css";
+import { useState } from "react";
+import ContactPopup from "./components/ContactPopup";
 
 function App() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <Router>
       <Routes>
@@ -25,7 +33,8 @@ function App() {
           element={
             <>
               <Navbar />
-              <CommercialRealEstate />
+              <CommercialRealEstate togglePopup={togglePopup} />
+              {isPopupOpen && <ContactPopup togglePopup={togglePopup} />}
               <WhyTrustUs />
               <Partners />
               <TeamSection />
