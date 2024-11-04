@@ -40,17 +40,16 @@ const NewsComponent = () => {
     return <LoadingSpinner />;
   }
 
-
   return (
     <motion.div
       variants={fadeInVariants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#393939] font-gilroy text-white p-4 sm:p-6 md:p-8 flex flex-col items-center w-[95%] sm:w-[90%] m-auto mt-5 sm:mt-8 md:mt-10 mb-5 sm:mb-8 md:mb-10"
+      className="bg-[#FEFEFF] font-gilroy text-white p-4 sm:p-6 md:p-8 flex flex-col items-center w-[95%] sm:w-[90%] m-auto mt-5 sm:mt-8 md:mt-10 mb-5 sm:mb-8 md:mb-10"
     >
       <div className="relative text-center mb-8 sm:mb-12 md:mb-16">
-        <h2 className="text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[60px] md:mb-[90px] relative z-10">
+        <h2 className="text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[60px] md:mb-[90px] relative z-10">
           НОВОСТИ
         </h2>
         <div className="absolute z-[1] inset-0 flex items-center justify-center">
@@ -81,13 +80,13 @@ const NewsComponent = () => {
             </div>
           </div>
           <div className="w-full xl:w-[60%] text-white xl:pl-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-roadRadio mb-2 sm:mb-3 md:mb-4">
+            <h2 className="text-2xl text-[#3D4871] sm:text-3xl md:text-4xl lg:text-5xl font-roadRadio mb-2 sm:mb-3 md:mb-4">
               {item.title}
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-normal sm:leading-relaxed md:leading-7 mb-2 sm:mb-3 md:mb-4">
               {item.content}
             </p>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2 sm:mt-3 md:mt-4 font-bold">
+            <p className="text-lg sm:text-xl text-[#3D4871] md:text-2xl lg:text-3xl mt-2 sm:mt-3 md:mt-4 font-bold">
               {new Date(item.date).toLocaleString()}
             </p>
           </div>

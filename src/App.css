@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: #393939;
+  background-color: #fefeff;
 }
 
 /* Tailwind config or external CSS */
@@ -38,7 +38,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #baed93; /* Underline color */
+  background-color: #b6bfe2; /* Underline color */
   transition: width 0.3s ease-in-out;
 }
 
@@ -84,4 +84,3 @@ body {
   transform: translateX(100%);
   transition: opacity 500ms, transform 500ms;
 }
-

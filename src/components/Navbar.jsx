@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/images/Group.svg";
+import logo from "../assets/images/logoOriginal.jpg";
 import ContactPopup from "./ContactPopup";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -77,7 +77,7 @@ const Navbar = ({ onScroll, sections }) => {
         </Link>
 
         <motion.button
-          className="lg:hidden text-white text-3xl p-2"
+          className="lg:hidden text-[#6d7cb4] text-3xl p-2"
           onClick={toggleBurger}
           whileTap={{ scale: 0.95 }}
         >
@@ -92,15 +92,15 @@ const Navbar = ({ onScroll, sections }) => {
               exit="closed"
               variants={menuVariants}
               className={`
-                flex flex-col lg:flex-row gap-10 text-white transition-all text-2xl
+                flex flex-col lg:flex-row gap-10 text-black transition-all text-2xl
                 lg:relative absolute top-full left-0 w-full
-                lg:w-auto lg:bg-transparent bg-black/90
+                lg:w-auto lg:bg-transparent bg-black/30
                 lg:flex items-center py-4 lg:py-0
               `}
             >
               <Link
                 to="/News"
-                className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
                 onClick={closeBurger}
               >
                 НОВОСТИ
@@ -111,13 +111,13 @@ const Navbar = ({ onScroll, sections }) => {
                 onClick={() => {
                   closeBurger();
                 }}
-                className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
               >
                 ПРОЕКТЫ
               </Link>
               <Link
                 to="/Prices"
-                className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
                 onClick={closeBurger}
               >
                 УСЛУГИ
@@ -125,7 +125,7 @@ const Navbar = ({ onScroll, sections }) => {
 
               <Link
                 to="/Contacts"
-                className="nav-link hover:text-[#d6d6d6] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
                 onClick={closeBurger}
               >
                 КОНТАКТЫ
@@ -140,7 +140,7 @@ const Navbar = ({ onScroll, sections }) => {
                     togglePopup();
                     closeBurger();
                   }}
-                  className="w-full px-10 py-3 text-[22px] bg-[#8BFF30] hover:bg-[#55b74a] ease-in-out transition-all text-black"
+                  className="w-full px-10 py-3 text-[22px] bg-[#3D4871] hover:bg-[#7a82ab] ease-in-out transition-all text-white"
                 >
                   ЗАКАЗАТЬ ЗВОНОК
                 </button>
@@ -152,7 +152,7 @@ const Navbar = ({ onScroll, sections }) => {
         <motion.div className="hidden lg:block" whileHover={{ scale: 1.02 }}>
           <button
             onClick={togglePopup}
-            className="px-10 py-3 text-[22px] bg-[#8BFF30] hover:bg-[#55b74a] ease-in-out transition-all"
+            className="px-10 py-3 text-[22px] bg-[#3D4871] hover:bg-[#7a82ab] ease-in-out transition-all text-white"
           >
             ЗАКАЗАТЬ ЗВОНОК
           </button>

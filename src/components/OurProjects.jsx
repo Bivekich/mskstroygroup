@@ -16,9 +16,7 @@ const OurProjects = () => {
   }, []);
 
   if (!content) {
-    return (
-      <LoadingSpinner />
-    );
+    return <LoadingSpinner />;
   }
 
   const { images } = content;
@@ -40,16 +38,16 @@ const OurProjects = () => {
   const fadeInVariants = {
     initial: {
       opacity: 0,
-      y: 20
+      y: 20,
     },
     animate: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -58,19 +56,19 @@ const OurProjects = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#393939] text-white p-4 sm:p-8 relative mt-5 sm:mt-10 mb-5 sm:mb-10 w-[95%] sm:w-[90%] m-auto"
+      className="bg-[#FEFEFF] text-white p-4 sm:p-8 relative mt-5 sm:mt-10 mb-5 sm:mb-10 w-[95%] sm:w-[90%] m-auto"
     >
-      <motion.h2 
+      <motion.h2
         variants={fadeInVariants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="text-center text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[90px] relative z-10"
+        className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[90px] relative z-10"
       >
         НАШИ ПРОЕКТЫ
       </motion.h2>
 
-      <motion.div 
+      <motion.div
         variants={fadeInVariants}
         initial="initial"
         whileInView="animate"
@@ -82,7 +80,7 @@ const OurProjects = () => {
         </h1>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         variants={fadeInVariants}
         initial="initial"
         whileInView="animate"
@@ -95,24 +93,24 @@ const OurProjects = () => {
               <AnimatePresence initial={false}>
                 <motion.div
                   key={currentImageIndex}
-                  initial={{ 
+                  initial={{
                     x: slideDirection === "next" ? "100%" : "-100%",
-                    opacity: 1
+                    opacity: 1,
                   }}
-                  animate={{ 
+                  animate={{
                     x: 0,
-                    opacity: 1
+                    opacity: 1,
                   }}
-                  exit={{ 
+                  exit={{
                     x: slideDirection === "next" ? "-100%" : "100%",
-                    opacity: 1
+                    opacity: 1,
                   }}
                   transition={{
                     type: "spring",
                     stiffness: 500,
                     damping: 50,
                     mass: 1,
-                    duration: 0.1
+                    duration: 0.1,
                   }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
@@ -125,7 +123,7 @@ const OurProjects = () => {
               </AnimatePresence>
             )}
 
-            <motion.div 
+            <motion.div
               variants={fadeInVariants}
               initial="initial"
               whileInView="animate"
@@ -135,13 +133,13 @@ const OurProjects = () => {
               <div className="flex">
                 <motion.button
                   onClick={handlePrevImage}
-                  className="text-[#5c5c5c] text-2xl sm:text-4xl px-2 sm:px-3 py-1 size-[70px] sm:size-[70px] md:size-[100px] duration-500 bg-[#8BFF30] hover:bg-[#50824a] z-5 shadow-3xl hover:text-gray-300 transition relative"
+                  className="text-white text-2xl sm:text-4xl px-2 sm:px-3 py-1 size-[70px] sm:size-[70px] md:size-[100px] duration-500 bg-[#3D4871] hover:bg-[#7a82ab] z-5 shadow-3xl hover:text-gray-300 transition relative"
                 >
                   &lt;
                 </motion.button>
                 <motion.button
                   onClick={handleNextImage}
-                  className="text-[#5c5c5c] text-2xl sm:text-4xl px-2 sm:px-3 py-1 size-[70px] sm:size-[70px] md:size-[100px] duration-500 bg-[#8BFF30] hover:bg-[#50824a] hover:text-gray-300 transition"
+                  className="text-white text-2xl sm:text-4xl px-2 sm:px-3 py-1 size-[70px] sm:size-[70px] md:size-[100px] duration-500 bg-[#3D4871] hover:bg-[#7a82ab] hover:text-gray-300 transition"
                 >
                   &gt;
                 </motion.button>

@@ -42,18 +42,18 @@ const PartnerLogos = () => {
   }, []);
 
   if (!partners.length) return null;
-  
+
   return (
-    <motion.div 
+    <motion.div
       variants={fadeInVariants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      className="bg-[#393939] text-center flex flex-col justify-center items-center w-[95%] sm:w-[97%] m-auto mb-5 sm:mb-10 p-4 sm:p-8"
+      className="bg-[#FEFEFF] text-center flex flex-col justify-center items-center w-[95%] sm:w-[97%] m-auto mb-5 sm:mb-10 p-4 sm:p-8"
     >
       {/* Title */}
       <div className="relative  mb-5">
-        <h2 className="text-center text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[30px] sm:mb-[50px] md:mb-[90px] relative z-10">
+        <h2 className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[30px] sm:mb-[50px] md:mb-[90px] relative z-10">
           НАШИ ПАРТНЕРЫ
         </h2>
         <div className="absolute inset-0 flex items-center justify-center">
@@ -62,7 +62,7 @@ const PartnerLogos = () => {
           </h1>
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-20 w-full">
         {partners.map((partner, index) => (
           <motion.div
@@ -80,7 +80,7 @@ const PartnerLogos = () => {
                 className="relative w-full h-0 pb-[100%] bg-black overflow-hidden"
               >
                 {/* Grey Tint Overlay */}
-                <div className="absolute inset-0 bg-[#393939] opacity-30 hover:opacity-10 duration-500 transition-all z-[2]" />
+                <div className="absolute inset-0 bg-[#FEFEFF] opacity-30 hover:opacity-10 duration-500 transition-all z-[2]" />
 
                 {/* Image */}
                 <img

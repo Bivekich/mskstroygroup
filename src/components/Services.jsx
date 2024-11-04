@@ -43,19 +43,19 @@ const CompanyServices = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#393939] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[95%] sm:w-[90%] md:w-[85%] xl:w-[75%] m-auto mb-10 sm:mb-15 md:mb-20"
+      className="bg-[#FEFEFF] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[95%] sm:w-[90%] md:w-[85%] xl:w-[75%] m-auto mb-10 sm:mb-15 md:mb-20"
     >
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         <h2
-          className="text-[#8BFF30] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-roadRadio 
+          className="text-[#3D4871] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-roadRadio 
                       mb-[45px] sm:mb-[60px] md:mb-[75px] lg:mb-[90px] relative z-10"
         >
           УСЛУГИ КОМПАНИИ
         </h2>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1
-            className="text-[40px] top-8 sm:text-[70px] sm:top-12 md:text-[100px] md:top-7 
+            className="text-[40px] top-8 sm:text-[70px] lg:mt-[-30px] sm:top-12 md:text-[100px] md:top-7 
                         lg:text-[130px] lg:top-4 xl:text-[160px] xl:top-0 
                         text-[#757575] font-roadRadio absolute whitespace-nowrap"
           >
@@ -71,11 +71,11 @@ const CompanyServices = () => {
           const isLeftColumn = index % 2 === 0;
           const iconColor = isEvenRow
             ? isLeftColumn
-              ? "bg-[#8BFF30] text-black"
-              : "bg-white text-[#8BFF30]"
+              ? "bg-[#3D4871] text-black"
+              : "bg-white text-[#3D4871]"
             : isLeftColumn
-            ? "bg-white text-[#8BFF30]"
-            : "bg-[#8BFF30] text-black";
+            ? "bg-white text-[#3D4871]"
+            : "bg-[#3D4871] text-black";
 
           return (
             <motion.div

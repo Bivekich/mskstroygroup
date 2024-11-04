@@ -43,9 +43,9 @@ const TestimonialsSection = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      className="bg-[#393939] text-white py-5 sm:py-8 md:py-10 relative"
+      className="bg-[#FEFEFF] text-white py-5 sm:py-8 md:py-10 relative"
     >
-      <h2 className="text-center text-[#8BFF30] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[40px] sm:mb-[60px] md:mb-[80px] relative z-10">
+      <h2 className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[40px] sm:mb-[60px] md:mb-[80px] relative z-10">
         МНЕНИЕ ЗАКАЗЧИКОВ
       </h2>
 
@@ -71,12 +71,12 @@ const TestimonialsSection = () => {
             <img
               src={Quote}
               alt="Quote Icon"
-              className="text-[#8BFF30] w-[40px] sm:w-[55px] md:w-[70px]"
+              className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
             <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               {testimonials[0].description1 || "Default testimonial text"}
             </p>
-            <p className="text-[#8BFF30] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               — {testimonials[0].name1 || "Anonymous"}
             </p>
           </motion.div>
@@ -94,12 +94,12 @@ const TestimonialsSection = () => {
             <img
               src={Quote}
               alt="Quote Icon"
-              className="text-[#8BFF30] w-[40px] sm:w-[55px] md:w-[70px]"
+              className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
             <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               {testimonials[0].description2 || "Default testimonial text"}
             </p>
-            <p className="text-[#8BFF30] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               — {testimonials[0].name2 || "Anonymous"}
             </p>
           </motion.div>
@@ -117,12 +117,12 @@ const TestimonialsSection = () => {
             <img
               src={Quote}
               alt="Quote Icon"
-              className="text-[#8BFF30] w-[40px] sm:w-[55px] md:w-[70px]"
+              className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
             <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               {testimonials[0].description3 || "Default testimonial text"}
             </p>
-            <p className="text-[#8BFF30] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               — {testimonials[0].name3 || "Anonymous"}
             </p>
           </motion.div>
@@ -140,12 +140,12 @@ const TestimonialsSection = () => {
             <img
               src={Quote}
               alt="Quote Icon"
-              className="text-[#8BFF30] w-[40px] sm:w-[55px] md:w-[70px]"
+              className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
             <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               {testimonials[0].description4 || "Default testimonial text"}
             </p>
-            <p className="text-[#8BFF30] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
               — {testimonials[0].name4 || "Anonymous"}
             </p>
           </motion.div>

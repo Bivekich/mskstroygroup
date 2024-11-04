@@ -61,14 +61,16 @@ const ContactPopup = ({ togglePopup }) => {
         <h2 className="mb-3 sm:mb-4 lg:mb-6 text-2xl sm:text-3xl md:text-4xl font-roadRadio px-4">
           ЗАКАЗАТЬ ЗВОНОК
         </h2>
-        <p className="mb-4 sm:mb-5 lg:mb-6 font-light text-lg sm:text-xl md:text-2xl 
-                    w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] m-auto px-4">
+        <p
+          className="mb-4 sm:mb-5 lg:mb-6 font-light text-lg sm:text-xl md:text-2xl 
+                    w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] m-auto px-4"
+        >
           Оставьте заявку, и наш эксперт ответит на все ваши вопросы
         </p>
 
         {/* Form */}
-        <form 
-          className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-[85%] m-auto px-4" 
+        <form
+          className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-[85%] m-auto px-4"
           onSubmit={handleSubmit}
         >
           <div className="mb-3 sm:mb-4">
@@ -81,7 +83,7 @@ const ContactPopup = ({ togglePopup }) => {
                        bg-[#505050] text-base sm:text-lg md:text-xl
                        placeholder:text-base sm:placeholder:text-lg md:placeholder:text-xl 
                        placeholder:text-white placeholder:font-light 
-                       focus:outline-none focus:ring-2 focus:ring-lime-500"
+                       focus:outline-none focus:ring-2 focus:ring-[#6d7cb4]"
               placeholder="Имя"
               required
             />
@@ -96,7 +98,7 @@ const ContactPopup = ({ togglePopup }) => {
                        bg-[#505050] text-base sm:text-lg md:text-xl
                        placeholder:text-base sm:placeholder:text-lg md:placeholder:text-xl 
                        placeholder:text-white placeholder:font-light 
-                       focus:outline-none focus:ring-2 focus:ring-lime-500"
+                       focus:outline-none focus:ring-2 focus:ring-[#6d7cb4]"
               placeholder="Телефон"
               required
             />
@@ -110,7 +112,7 @@ const ContactPopup = ({ togglePopup }) => {
                        bg-[#505050] text-base sm:text-lg md:text-xl
                        placeholder:text-base sm:placeholder:text-lg md:placeholder:text-xl 
                        placeholder:text-white placeholder:font-light 
-                       focus:outline-none focus:ring-2 focus:ring-lime-500
+                       focus:outline-none focus:ring-2 focus:ring-[#6d7cb4]
                        min-h-[100px] resize-none"
               placeholder="Комментарий"
               required
@@ -118,9 +120,9 @@ const ContactPopup = ({ togglePopup }) => {
           </div>
           <button
             type="submit"
-            className="w-full bg-[#8BFF30] hover:bg-[#55b74a] transition 
-                     text-lg sm:text-xl md:text-2xl text-[#272727] font-bold 
-                     py-3 sm:py-4 px-4 font-roadRadio" 
+            className="w-full bg-[#3D4871] hover:bg-[#7a82ab] transition 
+                     text-lg sm:text-xl md:text-2xl text-white  
+                     py-3 sm:py-4 px-4 font-roadRadio"
           >
             Отправить
           </button>
@@ -129,7 +131,7 @@ const ContactPopup = ({ togglePopup }) => {
         {/* Close Button */}
         <button
           onClick={togglePopup}
-          className="absolute top-2 right-4 text-gray-400 hover:text-[#8BFF30] transition 
+          className="absolute top-2 right-4 text-gray-400 hover:text-[#3D4871] transition 
                    text-3xl sm:text-4xl"
         >
           &times;
