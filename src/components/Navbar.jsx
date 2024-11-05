@@ -67,17 +67,17 @@ const Navbar = ({ onScroll, sections }) => {
 
   return (
     <motion.nav variants={fadeInVariants} initial="initial" animate="animate">
-      <div className="flex justify-around items-center my-5 font-roadRadio relative z-[30]">
+      <div className="flex lg:w-[84%] m-auto justify-around items-center my-3 sm:my-4 font-roadRadio relative z-[30]">
         <Link to="/">
           <img
             src={logo}
             alt="Logo"
-            className="xl:w-[277px] w-[150px] h-full"
+            className="xl:w-[200px] w-[120px] h-full"
           />
         </Link>
 
         <motion.button
-          className="lg:hidden text-[#6d7cb4] text-3xl p-2"
+          className="lg:hidden text-[#6d7cb4] text-2xl p-2"
           onClick={toggleBurger}
           whileTap={{ scale: 0.95 }}
         >
@@ -92,15 +92,20 @@ const Navbar = ({ onScroll, sections }) => {
               exit="closed"
               variants={menuVariants}
               className={`
-                flex flex-col lg:flex-row gap-10 text-black transition-all text-2xl
+                flex flex-col lg:flex-row gap-6 sm:gap-8 text-black transition-all text-lg sm:text-xl
                 lg:relative absolute top-full left-0 w-full
-                lg:w-auto lg:bg-transparent bg-black/30
-                lg:flex items-center py-4 lg:py-0
+                lg:w-auto lg:bg-transparent 
+                ${!isLargeScreen ? "backdrop-blur-md bg-black/30" : ""}
+                lg:flex items-center py-3 lg:py-0
               `}
             >
+              {!isLargeScreen && (
+                <div className="absolute inset-0 bg-black/30 -z-10" />
+              )}
+
               <Link
                 to="/News"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
                 onClick={closeBurger}
               >
                 НОВОСТИ
@@ -108,16 +113,15 @@ const Navbar = ({ onScroll, sections }) => {
 
               <Link
                 to="/Projects"
-                onClick={() => {
-                  closeBurger();
-                }}
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                onClick={closeBurger}
               >
                 ПРОЕКТЫ
               </Link>
+
               <Link
                 to="/Prices"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
                 onClick={closeBurger}
               >
                 УСЛУГИ
@@ -125,14 +129,14 @@ const Navbar = ({ onScroll, sections }) => {
 
               <Link
                 to="/Contacts"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
                 onClick={closeBurger}
               >
                 КОНТАКТЫ
               </Link>
 
               <motion.div
-                className="lg:hidden px-4 pb-4"
+                className="lg:hidden px-3 pb-3"
                 whileHover={{ scale: 1.02 }}
               >
                 <button
@@ -140,7 +144,7 @@ const Navbar = ({ onScroll, sections }) => {
                     togglePopup();
                     closeBurger();
                   }}
-                  className="w-full px-10 py-3 text-[22px] bg-[#3D4871] hover:bg-[#7a82ab] ease-in-out transition-all text-white"
+                  className="w-full px-6 py-2 text-lg sm:text-xl bg-[#3D4871] hover:bg-[#7a82ab] ease-in-out transition-all text-white"
                 >
                   ЗАКАЗАТЬ ЗВОНОК
                 </button>
@@ -152,7 +156,7 @@ const Navbar = ({ onScroll, sections }) => {
         <motion.div className="hidden lg:block" whileHover={{ scale: 1.02 }}>
           <button
             onClick={togglePopup}
-            className="px-10 py-3 text-[22px] bg-[#3D4871] hover:bg-[#7a82ab] ease-in-out transition-all text-white"
+            className="px-6 py-2 text-lg sm:text-xl bg-[#3D4871] hover:bg-[#7a82ab] ease-in-out transition-all text-white"
           >
             ЗАКАЗАТЬ ЗВОНОК
           </button>

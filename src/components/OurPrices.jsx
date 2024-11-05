@@ -61,15 +61,15 @@ const PriceList = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col lg:flex-row items-center w-full">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full">
         {/* Image */}
-        <div className="w-full lg:w-[70%] relative z-[2]">
+        <div className="w-full lg:w-[45%] relative z-[2]">
           <img src={prices} alt="Background" className="w-full h-auto" />
         </div>
 
         {/* Download Box */}
         <div
-          className="w-full lg:w-[700px] bg-[#707070] lg:ml-[-280px] z-[1] p-6 sm:p-8 md:p-10 
+          className="w-full lg:w-[600px] bg-[#707070] lg:ml-[-200px] z-[1] p-4 sm:p-6 md:p-8 
                       mt-[-50px] lg:mt-0 
                       min-h-[250px] sm:min-h-[300px] md:min-h-[350px] 
                       text-white flex flex-col justify-center items-center"

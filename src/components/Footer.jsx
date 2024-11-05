@@ -48,46 +48,22 @@ const Footer = () => {
   };
 
   return (
-    <div className="text-gray-800 py-10">
-      <footer className="w-[87%] m-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-0">
+    <div className="text-gray-800 py-6 sm:py-8">
+      <footer className="w-[85%] sm:w-[80%] m-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-6">
           <div className="text-center md:text-left">
             <img
               src={logo}
               alt="Logo"
-              className="mx-auto md:mx-0 w-[200px] md:w-[277px] h-auto mb-4"
+              className="mx-auto md:mx-0 w-[140px] md:w-[200px] h-auto mb-3"
             />
-            <p className="text-[#757575] visible md:invisible lg:visible text-[30px] mb-6">
+            <p className="text-[#757575] visible md:invisible lg:visible text-xl sm:text-2xl mb-4">
               {contactData.workingHours}
             </p>
-
-            {/* <div className="flex space-x-6 justify-center md:justify-start text-[#9d9d9d]">
-              <a href="#" className="hover:text-[#3D4871] transition-colors">
-                <FontAwesomeIcon icon={faVk} className="text-2xl sm:text-3xl" />
-              </a>
-              <a href="#" className="hover:text-[#3D4871] transition-colors">
-                <FontAwesomeIcon
-                  icon={faYoutube}
-                  className="text-2xl sm:text-3xl"
-                />
-              </a>
-              <a href="#" className="hover:text-[#3D4871] transition-colors">
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="text-2xl sm:text-3xl"
-                />
-              </a>
-              <a href="#" className="hover:text-[#3D4871] transition-colors">
-                <FontAwesomeIcon
-                  icon={faFacebook}
-                  className="text-2xl sm:text-3xl"
-                />
-              </a>
-            </div> */}
           </div>
 
-          <div className="text-[18px] md:text-[24px] space-y-3 font-semibold text-[#3D4871] flex-col md:ml-[-120px]">
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-20 text-center  xl:text-left ">
+          <div className="text-base sm:text-lg md:text-xl space-y-2 font-semibold text-[#3D4871] flex-col md:ml-[-60px]">
+            <div className="flex flex-col xl:flex-row gap-3 xl:gap-12 text-center xl:text-left">
               <Link
                 to="/News"
                 className="hover:text-[#3D4871] transition-colors"
@@ -101,7 +77,7 @@ const Footer = () => {
                 УСЛУГИ
               </Link>
             </div>
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-20 text-center xl:text-left">
+            <div className="flex flex-col xl:flex-row gap-3 xl:gap-12 text-center xl:text-left">
               <Link
                 to="/Projects"
                 className="hover:text-[#3D4871] transition-colors"
@@ -117,7 +93,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="text-[18px] md:text-[24px] space-y-2 flex flex-col items-center font-normal xl:items-start text-[#3D4871]">
+          <div className="text-base sm:text-lg md:text-xl space-y-1 flex flex-col items-center font-normal xl:items-start text-[#3D4871]">
             <a href={`tel:${contactData.phone1?.replace(/[^\d+]/g, "")}`}>
               {contactData.phone1}
             </a>
@@ -128,8 +104,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="border-[#757575] my-6" />
-        <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-4 md:gap-0 text-[#757575] text-[20px]">
+        <hr className="border-[#757575] my-4 sm:my-5" />
+        <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-2 md:gap-3 text-[#757575] text-sm sm:text-base">
           <p>© 2024 Msk Stroy Group</p>
           <p>
             <a href={policyLink} target="_blank" rel="noopener noreferrer">

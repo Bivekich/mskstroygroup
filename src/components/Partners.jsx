@@ -49,7 +49,7 @@ const PartnerLogos = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      className="bg-[#FEFEFF] text-center flex flex-col justify-center items-center w-[95%] sm:w-[97%] m-auto mb-5 sm:mb-10 p-4 sm:p-8"
+      className="bg-[#FEFEFF] text-center flex flex-col justify-center items-center w-[85%] sm:w-[80%] m-auto mb-4 sm:mb-8 p-4 sm:p-6"
     >
       {/* Title */}
       <div className="relative  mb-5">
@@ -57,13 +57,13 @@ const PartnerLogos = () => {
           НАШИ ПАРТНЕРЫ
         </h2>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-[40px] top-4 sm:text-[70px] lg:mt-[-20px] sm:top-6 md:text-[100px] md:top-4 xl:text-[160px] xl:top-0 text-[#757575] font-roadRadio absolute whitespace-nowrap">
+          <h1 className="text-[40px] top-4 sm:text-[70px] lg:mt-[-30px] sm:top-6 md:text-[100px] md:top-4 xl:text-[160px] xl:top-0 text-[#757575] font-roadRadio absolute whitespace-nowrap">
             ПАРТНЕРЫ
           </h1>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-20 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-16 w-full">
         {partners.map((partner, index) => (
           <motion.div
             key={index}

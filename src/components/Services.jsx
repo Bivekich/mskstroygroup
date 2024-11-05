@@ -43,7 +43,7 @@ const CompanyServices = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[95%] sm:w-[90%] md:w-[85%] xl:w-[75%] m-auto mb-10 sm:mb-15 md:mb-20"
+      className="bg-[#FEFEFF] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[85%] sm:w-[80%] md:w-[75%] xl:w-[70%] m-auto mb-8 sm:mb-12 md:mb-16"
     >
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
@@ -101,10 +101,10 @@ const CompanyServices = () => {
                   )}
                 </div>
               </div>
-              <h3 className="text-4xl font-roadRadio mb-4 ml-10">
+              <h3 className="text-3xl font-roadRadio mb-4 ml-8">
                 {service.title}
               </h3>
-              <p className="text-3xl font-light text-left ml-10 mb-10">
+              <p className="text-2xl font-light text-left ml-8 mb-8">
                 {service.description}
               </p>
             </motion.div>

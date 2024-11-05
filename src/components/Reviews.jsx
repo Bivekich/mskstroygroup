@@ -66,14 +66,14 @@ const TestimonialsSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-[#757575] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
+            className="bg-[#757575] p-3 sm:p-4 md:p-5 flex flex-col w-full lg:w-7/12 space-y-2 sm:space-y-3 pb-6 sm:pb-8 md:pb-16 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img
               src={Quote}
               alt="Quote Icon"
               className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
-            <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-white text-base sm:text-lg md:text-xl w-[90%] sm:w-[85%] md:w-[80%] m-auto">
               {testimonials[0].description1 || "Default testimonial text"}
             </p>
             <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
@@ -89,14 +89,14 @@ const TestimonialsSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-[#757575] lg:ml-[10%] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
+            className="bg-[#757575] lg:ml-[10%] p-3 sm:p-4 md:p-5 flex flex-col w-full lg:w-7/12 space-y-2 sm:space-y-3 pb-6 sm:pb-8 md:pb-16 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img
               src={Quote}
               alt="Quote Icon"
               className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
-            <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-white text-base sm:text-lg md:text-xl w-[90%] sm:w-[85%] md:w-[80%] m-auto">
               {testimonials[0].description2 || "Default testimonial text"}
             </p>
             <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
@@ -112,14 +112,14 @@ const TestimonialsSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-[#757575] lg:ml-[20%] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
+            className="bg-[#757575] lg:ml-[20%] p-3 sm:p-4 md:p-5 flex flex-col w-full lg:w-7/12 space-y-2 sm:space-y-3 pb-6 sm:pb-8 md:pb-16 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img
               src={Quote}
               alt="Quote Icon"
               className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
-            <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-white text-base sm:text-lg md:text-xl w-[90%] sm:w-[85%] md:w-[80%] m-auto">
               {testimonials[0].description3 || "Default testimonial text"}
             </p>
             <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">
@@ -135,14 +135,14 @@ const TestimonialsSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-[#757575] lg:ml-[30%] p-4 sm:p-5 md:p-6 flex flex-col w-full lg:w-8/12 space-y-3 sm:space-y-4 pb-8 sm:pb-12 md:pb-20 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
+            className="bg-[#757575] lg:ml-[30%] p-3 sm:p-4 md:p-5 flex flex-col w-full lg:w-7/12 space-y-2 sm:space-y-3 pb-6 sm:pb-8 md:pb-16 duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             <img
               src={Quote}
               alt="Quote Icon"
               className="text-[#3D4871] w-[40px] sm:w-[55px] md:w-[70px]"
             />
-            <p className="text-white text-lg sm:text-xl md:text-2xl w-[95%] sm:w-[92%] md:w-[90%] m-auto">
+            <p className="text-white text-base sm:text-lg md:text-xl w-[90%] sm:w-[85%] md:w-[80%] m-auto">
               {testimonials[0].description4 || "Default testimonial text"}
             </p>
             <p className="text-[#3D4871] font-roadRadio text-xl sm:text-xl md:text-2xl pt-3 sm:pt-4 md:pt-5 w-[95%] sm:w-[92%] md:w-[90%] m-auto">

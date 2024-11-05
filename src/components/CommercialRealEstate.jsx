@@ -81,18 +81,18 @@ const CommercialRealEstate = ({ togglePopup }) => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] text-[#4c5e9e] p-4 sm:p-6 md:p-8 flex flex-col 2xl:flex-row justify-between w-[95%] md:w-[90%] m-auto mt-5 md:mt-10 mb-5 md:mb-10"
+      className="bg-[#FEFEFF] text-[#4c5e9e] p-3 sm:p-4 md:p-6 flex flex-col 2xl:flex-row justify-between w-[85%] md:w-[75%] m-auto mt-4 md:mt-8 mb-4 md:mb-8"
     >
       <div className="w-full 2xl:w-[50%] flex flex-col justify-between">
-        <h2 className="text-[32px] md:text-[43px] mb-4 leading-[36px] md:leading-[42px] font-roadRadio">
+        <h2 className="text-[28px] md:text-[36px] mb-3 leading-[32px] md:leading-[38px] font-roadRadio">
           {content.title}
         </h2>
-        <p className="mb-6 md:mb-8 text-[24px] md:text-[32px] leading-7 md:leading-9 w-full 2xl:w-[90%] font-light">
+        <p className="mb-5 md:mb-6 text-[18px] md:text-[24px] leading-6 md:leading-8 w-full 2xl:w-[85%] font-light">
           {content.description}
         </p>
-        <div className="flex flex-col sm:flex-row justify-between text-[20px] md:text-[25px] text-[#757575] mb-6 md:mb-8 font-roadRadio leading-6 gap-6 sm:gap-0">
+        <div className="flex flex-col sm:flex-row justify-between text-[16px] md:text-[18px] text-[#757575] mb-4 md:mb-6 font-roadRadio leading-6 gap-6 sm:gap-0">
           <div>
-            <p className="w-full sm:w-[150px]">{content.experience}</p>
+            <p className="w-full sm:w-[100px]">{content.experience}</p>
           </div>
           <div className="hidden sm:block w-[1px] h-[90px] bg-[#757575] mt-[-10px]"></div>
           <div>
@@ -100,7 +100,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
           </div>
           <div className="hidden sm:block w-[1px] h-[90px] bg-[#757575] mt-[-10px]"></div>
           <div>
-            <p className="w-full sm:w-[300px]">{content.individualApproach}</p>
+            <p className="w-full sm:w-[200px]">{content.individualApproach}</p>
           </div>
         </div>
         <div className="hidden 3xl:block">
@@ -124,7 +124,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
         </button>
       </div>
 
-      <div className="w-full 2xl:w-[50%] h-[40vh] 2xl:h-[65vh] relative overflow-hidden mt-6 2xl:mt-0">
+      <div className="w-full 2xl:w-[45%] h-[35vh] 2xl:h-[60vh] relative overflow-hidden mt-6 2xl:mt-0">
         {images && images.length > 0 && (
           <motion.div
             key={currentImageIndex}

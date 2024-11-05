@@ -56,14 +56,14 @@ const OurProjects = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] text-white p-4 sm:p-8 relative mt-5 sm:mt-10 mb-5 sm:mb-10 w-[95%] sm:w-[90%] m-auto"
+      className="bg-[#FEFEFF] text-white p-3 sm:p-6 relative mt-4 sm:mt-8 mb-4 sm:mb-8 w-[85%] sm:w-[75%] m-auto"
     >
       <motion.h2
         variants={fadeInVariants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[45px] sm:mb-[90px] relative z-10"
+        className="text-center text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio mb-[35px] sm:mb-[70px] relative z-10"
       >
         НАШИ ПРОЕКТЫ
       </motion.h2>
@@ -75,7 +75,7 @@ const OurProjects = () => {
         viewport={{ once: true }}
         className="absolute inset-0 flex items-center justify-center"
       >
-        <h1 className="text-[40px] top-8 sm:text-[70px] sm:top-12 md:text-[100px] md:top-7 xl:top-0 xl:text-[160px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
+        <h1 className="text-[35px] top-8 sm:text-[60px] sm:top-10 md:text-[80px] md:top-6 xl:top-0 xl:text-[120px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
           СТРОЙ ГРУПП
         </h1>
       </motion.div>
@@ -85,9 +85,9 @@ const OurProjects = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="h-[50vh] sm:h-[70vh] md:h-[90vh] flex items-center justify-center relative z-5"
+        className="h-[40vh] sm:h-[60vh] md:h-[75vh] flex items-center justify-center relative z-5"
       >
-        <div className="w-full h-full flex flex-col items-center justify-center gap-4 sm:gap-8">
+        <div className="w-full h-full flex flex-col items-center justify-center gap-3 sm:gap-6">
           <div className="w-full h-full relative overflow-hidden">
             {images && images.length > 0 && (
               <AnimatePresence initial={false}>
@@ -128,18 +128,18 @@ const OurProjects = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="absolute bottom-4 sm:bottom-8 w-full flex justify-center items-center"
+              className="absolute bottom-3 sm:bottom-6 w-full flex justify-center items-center"
             >
               <div className="flex">
                 <motion.button
                   onClick={handlePrevImage}
-                  className="text-white text-2xl sm:text-4xl px-2 sm:px-3 py-1 size-[70px] sm:size-[70px] md:size-[100px] duration-500 bg-[#3D4871] hover:bg-[#7a82ab] z-5 shadow-3xl hover:text-gray-300 transition relative"
+                  className="text-white text-xl sm:text-3xl px-2 sm:px-3 py-1 size-[50px] sm:size-[60px] md:size-[80px] duration-500 bg-[#3D4871] hover:bg-[#7a82ab] z-5 shadow-3xl hover:text-gray-300 transition relative"
                 >
                   &lt;
                 </motion.button>
                 <motion.button
                   onClick={handleNextImage}
-                  className="text-white text-2xl sm:text-4xl px-2 sm:px-3 py-1 size-[70px] sm:size-[70px] md:size-[100px] duration-500 bg-[#3D4871] hover:bg-[#7a82ab] hover:text-gray-300 transition"
+                  className="text-white text-xl sm:text-3xl px-2 sm:px-3 py-1 size-[50px] sm:size-[60px] md:size-[80px] duration-500 bg-[#3D4871] hover:bg-[#7a82ab] hover:text-gray-300 transition"
                 >
                   &gt;
                 </motion.button>

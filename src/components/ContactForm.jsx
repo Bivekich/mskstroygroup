@@ -107,10 +107,10 @@ const ContactForm = () => {
         className="absolute z-[2] w-full h-full"
       ></iframe>
 
-      <div className="py-8 sm:py-12 md:py-16 lg:py-20 flex items-center w-[95%] sm:w-[90%] lg:w-[87%] justify-between m-auto z-[5]">
-        <div className="flex flex-col xl:flex-row justify-between w-full gap-6 lg:gap-8">
-          <div className="w-full xl:w-[550px] z-[5] bg-[#757575] text-xl sm:text-2xl lg:text-3xl p-6 sm:p-8 md:p-12 lg:p-[90px] max-h-[600px] overflow-y-auto text-white">
-            <h2 className="text-[#3D4871] text-4xl sm:text-5xl lg:text-7xl font-roadRadio mb-3 sm:mb-4 lg:mb-5">
+      <div className="py-6 sm:py-8 md:py-12 flex items-center w-[90%] sm:w-[85%] lg:w-[80%] justify-between m-auto z-[5]">
+        <div className="flex flex-col xl:flex-row justify-between w-full gap-4 lg:gap-6">
+          <div className="w-full flex flex-col xl:w-[450px] z-[5] bg-[#757575] text-lg sm:text-xl lg:text-2xl p-4 sm:p-6 md:p-20 max-h-[500px] overflow-y-auto text-white">
+            <h2 className="text-[#3D4871] text-3xl sm:text-4xl lg:text-5xl font-roadRadio mb-3 sm:mb-4">
               КОНТАКТЫ
             </h2>
             <p>
@@ -126,52 +126,21 @@ const ContactForm = () => {
             <p>
               <a href={`mailto:${contactData.email}`}>{contactData.email}</a>
             </p>
-            <p className="mt-3 lg:mt-5 text-[#FEFEFF]">
+            <p className="mt-2 lg:mt-4 text-[#FEFEFF]">
               {contactData.workingHours}
             </p>
-
-            {/* <div className="flex mt-4 sm:mt-6 lg:mt-8 space-x-4 lg:space-x-5 text-[#3D4871]">
-              <a href="#">
-                <FontAwesomeIcon
-                  icon={faVk}
-                  size="lg"
-                  className="sm:text-2xl lg:text-3xl"
-                />
-              </a>
-              <a href="#">
-                <FontAwesomeIcon
-                  icon={faYoutube}
-                  size="lg"
-                  className="sm:text-2xl lg:text-3xl"
-                />
-              </a>
-              <a href="#">
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  size="lg"
-                  className="sm:text-2xl lg:text-3xl"
-                />
-              </a>
-              <a href="#">
-                <FontAwesomeIcon
-                  icon={faFacebook}
-                  size="lg"
-                  className="sm:text-2xl lg:text-3xl"
-                />
-              </a>
-            </div> */}
           </div>
 
-          <div className="bg-[#757575] text-lg sm:text-xl lg:text-2xl w-full xl:w-[650px] p-6 sm:p-8 md:p-12 lg:p-[100px] text-white z-[5]">
-            <h2 className="text-2xl sm:text-3xl lg:text-[41px] mb-4 sm:mb-6 lg:mb-10 font-roadRadio">
+          <div className="bg-[#757575] text-base sm:text-lg lg:text-xl w-full xl:w-[550px] p-4 sm:p-6 md:p-20 text-white z-[5]">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl mb-3 sm:mb-4 lg:mb-6 font-roadRadio">
               ОСТАЛИСЬ ВОПРОСЫ?
             </h2>
-            <p className="mb-4 sm:mb-6 lg:mb-8 font-light text-xl sm:text-2xl lg:text-[30px]">
+            <p className="mb-3 sm:mb-4 lg:mb-6 font-light text-lg sm:text-xl lg:text-2xl">
               Оставьте заявку, а наш эксперт ответит на все ваши вопросы
             </p>
 
             <form
-              className="space-y-3 sm:space-y-4 lg:space-y-5 font-light"
+              className="space-y-2 sm:space-y-3 lg:space-y-4 font-light"
               onSubmit={handleSubmit}
             >
               <input
@@ -180,7 +149,7 @@ const ContactForm = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-2 sm:p-3 bg-[#757575] border border-gray-800 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#6d7cb4]"
+                className="w-full p-2 bg-[#757575] border border-gray-800 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#6d7cb4]"
               />
               <input
                 type="text"
@@ -188,18 +157,18 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full p-2 sm:p-3 bg-[#757575] border border-gray-900 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#6d7cb4]"
+                className="w-full p-2 bg-[#757575] border border-gray-900 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#6d7cb4]"
               />
               <textarea
                 placeholder="Комментарий"
                 name="comment"
                 value={formData.comment}
                 onChange={handleChange}
-                className="w-full p-2 sm:p-3 bg-[#757575] border border-gray-800 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#6d7cb4] h-24 sm:h-28 lg:h-32"
+                className="w-full p-2 bg-[#757575] border border-gray-800 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#6d7cb4] h-20 sm:h-24 lg:h-28"
               ></textarea>
               <button
                 type="submit"
-                className="w-full p-2 sm:p-3 py-3 sm:py-4  font-roadRadio bg-[#3D4871] text-white hover:bg-[#7a82ab] hover:scale-[1.01] ease-in-out duration-300 transition-all text-lg sm:text-xl lg:text-2xl"
+                className="w-full p-2 py-2 sm:py-3 font-roadRadio bg-[#3D4871] text-white hover:bg-[#7a82ab] hover:scale-[1.01] ease-in-out duration-300 transition-all text-base sm:text-lg lg:text-xl"
               >
                 Отправить заявку
               </button>
