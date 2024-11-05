@@ -30,7 +30,7 @@ const WhyTrustUs = () => {
   const containerVariants = {
     animate: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.3,
       },
     },
   };
@@ -44,7 +44,7 @@ const WhyTrustUs = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 1,
         ease: "easeOut",
       },
     },

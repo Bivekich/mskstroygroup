@@ -102,7 +102,20 @@ const Navbar = ({ onScroll, sections }) => {
               {!isLargeScreen && (
                 <div className="absolute inset-0 bg-black/30 -z-10" />
               )}
-
+              <Link
+                to="/"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                onClick={closeBurger}
+              >
+                ГАЛНАЯ
+              </Link>
+              <Link
+                to="/Prices"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                onClick={closeBurger}
+              >
+                УСЛУГИ
+              </Link>
               <Link
                 to="/News"
                 className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
@@ -116,15 +129,7 @@ const Navbar = ({ onScroll, sections }) => {
                 className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
                 onClick={closeBurger}
               >
-                ПРОЕКТЫ
-              </Link>
-
-              <Link
-                to="/Prices"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
-                onClick={closeBurger}
-              >
-                УСЛУГИ
+                ГАЛЕРЕЯ
               </Link>
 
               <Link

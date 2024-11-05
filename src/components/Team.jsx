@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import client, { urlFor } from "../sanityClient";
 import { motion } from "framer-motion";
 
@@ -11,8 +11,17 @@ const fadeInVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 1.0,
       ease: "easeOut",
+    },
+  },
+};
+
+// Add container variants for staggered children
+const containerVariants = {
+  animate: {
+    transition: {
+      staggerChildren: 0.3, // Delay between each child animation
     },
   },
 };
@@ -56,14 +65,17 @@ const TeamSection = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 w-full">
+      <motion.div
+        variants={containerVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 w-full"
+      >
         {partners.map((partner, index) => (
           <motion.div
             key={index}
             variants={fadeInVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
             className="flex flex-col items-center"
           >
             <div className="relative w-full h-0 pb-[100%] bg-black overflow-hidden mb-4 sm:mb-7">
@@ -87,7 +99,7 @@ const TeamSection = () => {
             </p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import client, { urlFor } from "../sanityClient"; // Adjust the path as needed
 import { motion } from "framer-motion";
 import LoadingSpinner from "./LoadingSpinner";
@@ -12,7 +12,7 @@ const fadeInVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 2,
       ease: "easeOut",
     },
   },
@@ -27,7 +27,7 @@ const buttonVariants = {
     scale: 1.05,
     backgroundColor: "#7a82ab",
     transition: {
-      duration: 0.2,
+      duration: 2,
       ease: "easeInOut",
     },
   },
@@ -37,7 +37,7 @@ const imageVariants = {
   hover: {
     scale: 1.03,
     transition: {
-      duration: 0.3,
+      duration: 2,
       ease: "easeInOut",
     },
   },

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import client, { urlFor } from "../sanityClient"; // Adjust the path as needed
 import { motion } from "framer-motion";
 import LoadingSpinner from "./LoadingSpinner";
@@ -12,7 +12,7 @@ const fadeInVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 1,
       ease: "easeOut",
     },
   },

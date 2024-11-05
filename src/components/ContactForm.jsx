@@ -1,12 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faVk,
-  faYoutube,
-  faInstagram,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+
 import axios from "axios";
 import client from "../sanityClient"; // Adjust the path as needed
 
@@ -19,7 +13,7 @@ const fadeInVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 2,
       ease: "easeOut",
     },
   },

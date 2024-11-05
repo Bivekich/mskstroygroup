@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import client from "../sanityClient";
 import prices from "../assets/images/pricelist.svg";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ const fadeInVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 2,
       ease: "easeOut",
     },
   },

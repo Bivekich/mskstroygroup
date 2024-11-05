@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { motion } from "framer-motion";
@@ -25,8 +25,17 @@ const fadeInVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 1.0,
       ease: "easeOut",
+    },
+  },
+};
+
+// Add container variants for staggered children
+const containerVariants = {
+  animate: {
+    transition: {
+      staggerChildren: 0.3, // Delay between each child animation
     },
   },
 };
@@ -63,14 +72,17 @@ const PartnerLogos = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-16 w-full">
+      <motion.div
+        variants={containerVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-16 w-full"
+      >
         {partners.map((partner, index) => (
           <motion.div
             key={index}
             variants={fadeInVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
             className="flex justify-center items-center duration-500 hover:scale-[1.01] hover:shadow-2xl transition-all"
           >
             {partner.logo ? (
@@ -96,7 +108,7 @@ const PartnerLogos = () => {
             )}
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
