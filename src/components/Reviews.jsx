@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
 
       {/* Background Text - Hidden below lg screens */}
       <div className="hidden lg:block absolute right-0 top-45 items-center">
-        <div className="text-[#757575] text-[80px] lg:text-[100px] leading-[1.1] font-roadRadio -rotate-90">
+        <div className="text-[#757575] mr-[35%] text-[80px] lg:text-[100px] leading-[1.1] font-roadRadio -rotate-90">
           ОТЗЫВЫ <br />
           НАШИХ <br />
           КЛИЕНТОВ
