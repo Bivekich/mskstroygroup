@@ -51,7 +51,7 @@ const WhyTrustUs = () => {
   };
 
   return (
-    <div className="bg-[#FEFEFF] text-white p-3 sm:p-6 mb-3 sm:mb-6 relative w-[85%] sm:w-[80%] m-auto">
+    <div className=" text-white p-3 sm:p-6 mb-3 sm:mb-6 relative w-[85%] sm:w-[80%] m-auto">
       <h2 className="text-center text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio mb-[35px] sm:mb-[70px] relative z-10">
         ПОЧЕМУ НАМ ДОВЕРЯЮТ
       </h2>

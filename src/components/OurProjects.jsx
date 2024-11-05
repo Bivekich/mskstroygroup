@@ -56,7 +56,7 @@ const OurProjects = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] text-white p-3 sm:p-6 relative mt-4 sm:mt-8 mb-4 sm:mb-8 w-[85%] sm:w-[75%] m-auto"
+      className=" text-white p-3 sm:p-6 relative mt-4 sm:mt-8 mb-4 sm:mb-8 w-[85%] sm:w-[75%] m-auto"
     >
       <motion.h2
         variants={fadeInVariants}

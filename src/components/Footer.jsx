@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import client from "../sanityClient";
-import logo from "../assets/images/logoOriginal.jpg";
+import logo from "../assets/images/logoOriginal.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVk,

@@ -63,7 +63,7 @@ const ContactForm = () => {
   if (!testimonials.length) return null;
 
   return (
-    <div className="bg-[#FEFEFF] flex flex-col justify-center items-center py-8 sm:py-12 md:py-16 mb-10 sm:mb-16 md:mb-20">
+    <div className=" flex flex-col justify-center items-center py-8 sm:py-12 md:py-16 mb-10 sm:mb-16 md:mb-20">
       <div className="w-[95%] sm:w-[90%] md:w-[85%] p-4 sm:p-6 md:p-8">
         <h1 className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-4 sm:mb-6 md:mb-8">
           СВЯЗАТЬСЯ С НАМИ

@@ -58,7 +58,7 @@ const PartnerLogos = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      className="bg-[#FEFEFF] text-center flex flex-col justify-center items-center w-[85%] sm:w-[80%] m-auto mb-4 sm:mb-8 p-4 sm:p-6"
+      className="text-center flex flex-col justify-center items-center w-[85%] sm:w-[80%] m-auto mb-4 sm:mb-8 p-4 sm:p-6"
     >
       {/* Title */}
       <div className="relative  mb-5">

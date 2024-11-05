@@ -81,7 +81,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] text-[#4c5e9e] p-3 sm:p-4 md:p-6 flex flex-col 2xl:flex-row justify-between w-[85%] md:w-[75%] m-auto mt-4 md:mt-8 mb-4 md:mb-8"
+      className=" text-[#4c5e9e] p-3 sm:p-4 md:p-6 flex flex-col 2xl:flex-row justify-between w-[85%] md:w-[75%] m-auto mt-4 md:mt-8 mb-4 md:mb-8"
     >
       <div className="w-full 2xl:w-[50%] flex flex-col justify-between">
         <h2 className="text-[28px] md:text-[36px] mb-3 leading-[32px] md:leading-[38px] font-roadRadio">

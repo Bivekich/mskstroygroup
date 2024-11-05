@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/images/logoOriginal.jpg";
+import logo from "../assets/images/logoOriginal.png";
 import ContactPopup from "./ContactPopup";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -104,21 +104,21 @@ const Navbar = ({ onScroll, sections }) => {
               )}
               <Link
                 to="/"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-[#3D4871]"
                 onClick={closeBurger}
               >
-                ГАЛНАЯ
+                ГЛАВНАЯ
               </Link>
               <Link
                 to="/Prices"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-[#3D4871]"
                 onClick={closeBurger}
               >
                 УСЛУГИ
               </Link>
               <Link
                 to="/News"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-[#3D4871]"
                 onClick={closeBurger}
               >
                 НОВОСТИ
@@ -126,7 +126,7 @@ const Navbar = ({ onScroll, sections }) => {
 
               <Link
                 to="/Projects"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-[#3D4871]"
                 onClick={closeBurger}
               >
                 ГАЛЕРЕЯ
@@ -134,7 +134,7 @@ const Navbar = ({ onScroll, sections }) => {
 
               <Link
                 to="/Contacts"
-                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-black"
+                className="nav-link hover:text-[#6d7cb4] duration-100 ease-in-out text-center text-white lg:text-[#3D4871]"
                 onClick={closeBurger}
               >
                 КОНТАКТЫ

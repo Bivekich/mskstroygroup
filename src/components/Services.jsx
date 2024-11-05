@@ -43,7 +43,7 @@ const CompanyServices = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[85%] sm:w-[80%] md:w-[75%] xl:w-[70%] m-auto mb-8 sm:mb-12 md:mb-16"
+      className=" p-4 sm:p-6 md:p-8 min-h-screen flex flex-col items-center w-[85%] sm:w-[80%] md:w-[75%] xl:w-[70%] m-auto mb-8 sm:mb-12 md:mb-16"
     >
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">

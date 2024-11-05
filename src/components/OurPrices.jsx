@@ -46,7 +46,7 @@ const PriceList = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] text-white p-4 sm:p-8 relative mt-5 sm:mt-10 mb-5 sm:mb-10"
+      className=" text-white p-4 sm:p-8 relative mt-5 sm:mt-10 mb-5 sm:mb-10"
     >
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-12 md:mb-16">

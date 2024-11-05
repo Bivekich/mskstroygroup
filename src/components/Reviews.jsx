@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      className="bg-[#FEFEFF] text-white py-5 sm:py-8 md:py-10 relative"
+      className=" text-white py-5 sm:py-8 md:py-10 relative"
     >
       <h2 className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[40px] sm:mb-[60px] md:mb-[80px] relative z-10">
         МНЕНИЕ ЗАКАЗЧИКОВ

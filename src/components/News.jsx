@@ -46,7 +46,7 @@ const NewsComponent = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="bg-[#FEFEFF] font-gilroy text-white p-3 sm:p-4 md:p-6 flex flex-col items-center w-[85%] sm:w-[80%] m-auto mt-4 sm:mt-6 md:mt-8 mb-4 sm:mb-6 md:mb-8"
+      className="font-gilroy text-white p-3 sm:p-4 md:p-6 flex flex-col items-center w-[85%] sm:w-[80%] m-auto mt-4 sm:mt-6 md:mt-8 mb-4 sm:mb-6 md:mb-8"
     >
       <div className="relative text-center mb-6 sm:mb-8 md:mb-12">
         <h2 className="text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio mb-[35px] sm:mb-[45px] md:mb-[60px] relative z-10">

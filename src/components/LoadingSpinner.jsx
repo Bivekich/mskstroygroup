@@ -6,7 +6,7 @@ const LoadingSpinner = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex justify-center items-center h-[300px] bg-[#FEFEFF]"
+      className="flex justify-center items-center h-[300px]"
     >
       <motion.div
         animate={{ rotate: 360 }}
