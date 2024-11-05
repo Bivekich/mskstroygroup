@@ -65,10 +65,10 @@ const Footer = () => {
           <div className="text-base sm:text-lg md:text-xl space-y-2 font-semibold text-[#3D4871] flex-col md:ml-[-60px]">
             <div className="flex flex-col xl:flex-row gap-3 xl:gap-12 text-center xl:text-left">
               <Link
-                to="/News"
+                to="/"
                 className="hover:text-[#3D4871] transition-colors"
               >
-                НОВОСТИ
+                ГЛАВНАЯ
               </Link>
               <Link
                 to="/Prices"
@@ -76,14 +76,21 @@ const Footer = () => {
               >
                 УСЛУГИ
               </Link>
+              <Link
+                to="/News"
+                className="hover:text-[#3D4871] transition-colors"
+              >
+                НОВОСТИ
+              </Link>
+             
             </div>
-            <div className="flex flex-col xl:flex-row gap-3 xl:gap-12 text-center xl:text-left">
+            <div className="flex flex-col justify-center xl:flex-row gap-3 xl:gap-12 text-center xl:text-left">
               <Link
                 to="/Projects"
                 className="hover:text-[#3D4871] transition-colors"
               >
-                ПРОЕКТЫ
-              </Link>
+                ГАЛЕРЕЯ
+                </Link>
               <button
                 onClick={scrollToContactForm}
                 className="hover:text-[#3D4871] transition-colors text-left"
