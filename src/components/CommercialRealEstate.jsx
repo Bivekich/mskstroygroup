@@ -27,7 +27,7 @@ const buttonVariants = {
     scale: 1.05,
     backgroundColor: "#7a82ab",
     transition: {
-      duration: 2,
+      duration: 0.2,
       ease: "easeInOut",
     },
   },
@@ -37,7 +37,7 @@ const imageVariants = {
   hover: {
     scale: 1.03,
     transition: {
-      duration: 2,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
@@ -81,7 +81,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className=" text-[#4c5e9e] p-3 sm:p-4 md:p-6 flex flex-col 2xl:flex-row justify-between w-[85%] md:w-[75%] m-auto mt-4 md:mt-8 mb-4 md:mb-8"
+      className=" text-[#3D4871] p-3 sm:p-4 md:p-6 flex flex-col 2xl:flex-row justify-between w-[85%] md:w-[75%] m-auto mt-4 md:mt-8 mb-4 md:mb-8"
     >
       <div className="w-full 2xl:w-[50%] flex flex-col justify-between">
         <h2 className="text-[28px] md:text-[36px] mb-3 leading-[32px] md:leading-[38px] font-roadRadio">
@@ -109,7 +109,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
             initial="initial"
             whileHover="hover"
             onClick={togglePopup}
-            className="bg-[#3D4871] text-[#F1F2F3] py-4 md:py-5 w-full 2xl:max-w-[350px] font-roadRadio font-semibold text-lg md:text-xl"
+            className="bg-[#3D4871] hover:bg-[#7a82ab] text-[#F1F2F3] py-4 md:py-5 w-full 2xl:max-w-[350px] font-roadRadio font-semibold text-lg md:text-xl"
           >
             {content.buttonText}
           </motion.button>
@@ -157,7 +157,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
           </motion.div>
         )}
 
-        <div className="flex relative mt-[200px] xs:mt-[270px] sm:mt-[220px] 2xl:mt-[60%] justify-center cursor-pointer ">
+        <div className="flex relative mt-[150px] xs:mt-[250px] sm:mt-[220px] 2xl:mt-[60%] justify-center cursor-pointer ">
           <motion.button
             onClick={handlePrevImage}
             className="text-white text-3xl md:text-4xl px-2 md:px-3 py-1 size-[60px] md:size-[80px] bg-[#3D4871] hover:bg-[#7a82ab] z-5 shadow-3xl hover:text-gray-300 transition relative"
@@ -172,7 +172,7 @@ const CommercialRealEstate = ({ togglePopup }) => {
           </motion.button>
         </div>
       </div>
-    </motion.div>
+    </motion.div> 
   );
 };
 

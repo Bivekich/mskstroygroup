@@ -77,7 +77,7 @@ const Navbar = ({ onScroll, sections }) => {
         </Link>
 
         <motion.button
-          className="lg:hidden text-[#6d7cb4] text-2xl p-2"
+          className="lg:hidden text-[#3D4871] text-2xl p-2"
           onClick={toggleBurger}
           whileTap={{ scale: 0.95 }}
         >

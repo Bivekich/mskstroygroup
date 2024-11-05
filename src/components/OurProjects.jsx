@@ -63,7 +63,7 @@ const OurProjects = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="text-center text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio mb-[35px] sm:mb-[70px] relative z-10"
+        className="text-center text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio relative z-10"
       >
         НАШИ ПРОЕКТЫ
       </motion.h2>
@@ -73,9 +73,9 @@ const OurProjects = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="absolute inset-0 flex items-center justify-center"
+        className=" inset-0 flex items-center justify-center"
       >
-        <h1 className="text-[35px] top-8 sm:text-[60px] sm:top-10 md:text-[80px] md:top-6 xl:top-0 xl:text-[120px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
+        <h1 className="text-[35px] sm:text-[60px] md:text-[80px] xl:text-[120px]  lg:mt-[-50px] text-[#757575] font-roadRadio whitespace-nowrap">
           СТРОЙ ГРУПП
         </h1>
       </motion.div>

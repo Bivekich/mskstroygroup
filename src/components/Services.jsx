@@ -48,16 +48,13 @@ const CompanyServices = () => {
       {/* Title Section */}
       <div className="relative text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         <h2
-          className="text-[#3D4871] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-roadRadio 
-                      mb-[45px] sm:mb-[60px] md:mb-[75px] lg:mb-[90px] relative z-10"
+          className="text-[#3D4871] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-roadRadio relative z-10"
         >
           УСЛУГИ КОМПАНИИ
         </h2>
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="inset-0 flex items-center justify-center">
           <h1
-            className="text-[40px] top-8 sm:text-[70px] lg:mt-[-30px] sm:top-12 md:text-[100px] md:top-7 
-                        lg:text-[130px] lg:top-4 xl:text-[160px] xl:top-0 
-                        text-[#757575] font-roadRadio absolute whitespace-nowrap"
+            className="text-[35px] sm:text-[60px] md:text-[80px] xl:text-[120px] lg:mt-[-50px]  text-[#757575] font-roadRadio whitespace-nowrap"
           >
             УСЛУГИ
           </h1>

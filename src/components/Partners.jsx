@@ -62,11 +62,11 @@ const PartnerLogos = () => {
     >
       {/* Title */}
       <div className="relative  mb-5">
-        <h2 className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio mb-[30px] sm:mb-[50px] md:mb-[90px] relative z-10">
+        <h2 className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio relative z-10">
           НАШИ ПАРТНЕРЫ
         </h2>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-[40px] top-4 sm:text-[70px] lg:mt-[-30px] sm:top-6 md:text-[100px] md:top-4 xl:text-[160px] xl:top-0 text-[#757575] font-roadRadio absolute whitespace-nowrap">
+        <div className=" inset-0 flex items-center justify-center">
+          <h1 className="text-[35px] sm:text-[60px] md:text-[80px] xl:text-[120px] lg:mt-[-50px]  text-[#757575] font-roadRadio whitespace-nowrap">
             ПАРТНЕРЫ
           </h1>
         </div>

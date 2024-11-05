@@ -49,11 +49,11 @@ const NewsComponent = () => {
       className="font-gilroy text-white p-3 sm:p-4 md:p-6 flex flex-col items-center w-[85%] sm:w-[80%] m-auto mt-4 sm:mt-6 md:mt-8 mb-4 sm:mb-6 md:mb-8"
     >
       <div className="relative text-center mb-6 sm:mb-8 md:mb-12">
-        <h2 className="text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio mb-[35px] sm:mb-[45px] md:mb-[60px] relative z-10">
+        <h2 className="text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio relative z-10">
           НОВОСТИ
         </h2>
-        <div className="absolute z-[1] inset-0 flex items-center justify-center">
-          <h1 className="text-[35px] top-8 sm:text-[60px] sm:top-8 md:text-[80px] md:top-6 xl:text-[120px] xl:top-0 mt-[-25px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
+        <div className="z-[1] inset-0 flex items-center justify-center">
+          <h1 className="text-[35px] sm:text-[60px] md:text-[80px] xl:text-[120px] lg:mt-[-50px]  text-[#757575] font-roadRadio whitespace-nowrap">
             СТРОЙ ГРУПП
           </h1>
         </div>

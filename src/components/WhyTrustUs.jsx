@@ -52,11 +52,11 @@ const WhyTrustUs = () => {
 
   return (
     <div className=" text-white p-3 sm:p-6 mb-3 sm:mb-6 relative w-[85%] sm:w-[80%] m-auto">
-      <h2 className="text-center text-[#3D4871] text-3xl sm:text-4xl md:text-5xl font-roadRadio mb-[35px] sm:mb-[70px] relative z-10">
+      <h2 className="text-center text-[#3D4871] text-4xl sm:text-5xl md:text-7xl font-roadRadio relative z-10">
         ПОЧЕМУ НАМ ДОВЕРЯЮТ
       </h2>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-[35px] mt-8 rwrap:mt-0 top-6 sm:text-[60px] sm:top-8 md:text-[80px] md:top-5 xl:top-0 xl:text-[120px] text-[#757575] font-roadRadio absolute whitespace-nowrap">
+      <div className="inset-0 flex items-center justify-center">
+        <h1 className="text-[35px] sm:text-[60px] md:text-[80px] xl:text-[120px] text-[#757575] lg:mt-[-50px] font-roadRadio whitespace-nowrap ">
           ПРИЕМУЩЕСТВА
         </h1>
       </div>
@@ -77,7 +77,7 @@ const WhyTrustUs = () => {
             <div className="text-[#FEFEFF] text-center my-2 sm:my-3 mb-3 sm:mb-4">
               <FontAwesomeIcon
                 icon={faShieldHalved}
-                className="bg-[#3D4871] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4"
+                className="bg-[#3D4871] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4 scale-[1.1] "
               />
             </div>
             <h3 className="font-bold text-lg sm:text-xl mb-2 font-roadRadio tracking-wide text-center sm:text-left">
@@ -98,7 +98,7 @@ const WhyTrustUs = () => {
             <div className="text-white text-center my-2 sm:my-3 mb-3 sm:mb-4">
               <FontAwesomeIcon
                 icon={faMoneyBillWave}
-                className="bg-[#757575] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4 py-[16px] sm:py-[20px]"
+                className="bg-[#757575] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4 py-[14px] sm:py-[18px]"
               />
             </div>
             <h3 className="font-bold text-lg sm:text-xl mb-2 font-roadRadio tracking-wide text-[#FEFEFF] text-center sm:text-left">
@@ -119,7 +119,7 @@ const WhyTrustUs = () => {
             <div className="text-[#FEFEFF] text-center my-2 sm:my-3 mb-3 sm:mb-4">
               <FontAwesomeIcon
                 icon={faCompassDrafting}
-                className="bg-[#3D4871] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4"
+                className="bg-[#3D4871] text-2xl sm:text-3xl md:text-4xl scale-[1.10] rounded-full p-3 sm:p-4"
               />
             </div>
             <h3 className="font-bold text-lg sm:text-xl mb-2 font-roadRadio tracking-wide text-center sm:text-left">
@@ -140,7 +140,7 @@ const WhyTrustUs = () => {
             <div className="text-white text-center my-2 sm:my-3 mb-3 sm:mb-4">
               <FontAwesomeIcon
                 icon={faLayerGroup}
-                className="bg-[#757575] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4 px-3 sm:px-4"
+                className="bg-[#757575] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4 px-3 sm:px-[14px] scale-[1.07]"
               />
             </div>
             <h3 className="font-bold text-lg sm:text-xl mb-2 font-roadRadio tracking-wide text-[#FEFEFF] text-center sm:text-left">
@@ -161,7 +161,7 @@ const WhyTrustUs = () => {
             <div className="text-[#FEFEFF] text-center my-2 sm:my-3 mb-3 sm:mb-4">
               <FontAwesomeIcon
                 icon={faFileContract}
-                className="bg-[#3D4871] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4 px-[16px] sm:px-[24px]"
+                className="bg-[#3D4871] text-2xl sm:text-3xl md:text-4xl rounded-full p-3 sm:p-4 px-[16px] scale-[1.07] sm:px-[21px]"
               />
             </div>
             <h3 className="font-bold text-lg sm:text-xl mb-2 font-roadRadio tracking-wide text-center sm:text-left">
