@@ -22,7 +22,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     const botToken = "7880849860:AAF23EpxsNYRlCX6ZZ2nIAMby8xduW1upCE";
-    const chatId = "-4565147881";
+    const chatId = "-1002423363670";
 
     const message = `
       ВОПРОС СО СТРАНИЦЫ "СВЯЗАТЬСЯ С НАМИ"

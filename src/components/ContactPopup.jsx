@@ -25,7 +25,7 @@ const ContactPopup = ({ togglePopup }) => {
     // Replace with your Telegram bot token
     const botToken = "7880849860:AAF23EpxsNYRlCX6ZZ2nIAMby8xduW1upCE";
     // Replace with the chat ID you provided
-    const chatId = "-4565147881";
+    const chatId = "-1002423363670";
 
     const message = `
       ЗАКАЗ ЗВОНКА
