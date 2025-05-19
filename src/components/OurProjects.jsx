@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import client, { urlFor } from "../sanityClient"; // Adjust path as needed
+import client, { urlFor } from "../sanityClient";
 import { motion, AnimatePresence } from "framer-motion";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -7,6 +7,7 @@ const OurProjects = () => {
   const [content, setContent] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState("next");
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
     client
@@ -35,6 +36,15 @@ const OurProjects = () => {
     );
   };
 
+  const openLightbox = (e) => {
+    e.stopPropagation();
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+  };
+
   const fadeInVariants = {
     initial: {
       opacity: 0,
@@ -50,13 +60,48 @@ const OurProjects = () => {
     },
   };
 
+  // Lightbox component
+  const ImageLightbox = () => {
+    if (!isLightboxOpen) return null;
+
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
+        onClick={closeLightbox}
+      >
+        <motion.div
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.5 }}
+          className="relative max-w-[90vw] max-h-[90vh]"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <img
+            src={urlFor(images[currentImageIndex]).url()}
+            alt={`Enlarged carousel image ${currentImageIndex + 1}`}
+            className="max-w-full max-h-[90vh] object-contain"
+          />
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white text-2xl bg-[#3D4871] hover:bg-[#7a82ab] rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            ×
+          </button>
+        </motion.div>
+      </motion.div>
+    );
+  };
+
   return (
     <motion.div
       variants={fadeInVariants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className=" text-white p-3 sm:p-6 relative mt-4 sm:mt-8 mb-4 sm:mb-8 w-[85%] sm:w-[75%] m-auto"
+      className="text-white p-3 sm:p-6 relative mt-4 sm:mt-8 mb-4 sm:mb-8 w-[85%] sm:w-[75%] m-auto"
     >
       <motion.h2
         variants={fadeInVariants}
@@ -73,9 +118,9 @@ const OurProjects = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className=" inset-0 flex items-center justify-center"
+        className="inset-0 flex items-center justify-center"
       >
-        <h1 className="text-[35px] sm:text-[60px] md:text-[80px] xl:text-[120px]  lg:mt-[-50px] text-[#757575] font-roadRadio whitespace-nowrap">
+        <h1 className="text-[35px] sm:text-[60px] md:text-[80px] xl:text-[120px] lg:mt-[-50px] text-[#757575] font-roadRadio whitespace-nowrap">
           СТРОЙ ГРУПП
         </h1>
       </motion.div>
@@ -117,7 +162,8 @@ const OurProjects = () => {
                   <img
                     src={urlFor(images[currentImageIndex]).url()}
                     alt={`Carousel image ${currentImageIndex + 1}`}
-                    className="object-contain h-full w-full"
+                    className="object-contain h-full w-full cursor-zoom-in"
+                    onClick={openLightbox}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -148,6 +194,10 @@ const OurProjects = () => {
           </div>
         </div>
       </motion.div>
+
+      <AnimatePresence>
+        <ImageLightbox />
+      </AnimatePresence>
     </motion.div>
   );
 };
