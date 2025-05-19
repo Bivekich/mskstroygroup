@@ -117,7 +117,7 @@ const OurProjects = () => {
                   <img
                     src={urlFor(images[currentImageIndex]).url()}
                     alt={`Carousel image ${currentImageIndex + 1}`}
-                    className="object-cover h-full w-full"
+                    className="object-contain h-full w-full"
                   />
                 </motion.div>
               </AnimatePresence>
